@@ -1,0 +1,58 @@
+-- ENCRYPTION
+What the heck is going on
+
+What t
+he*hec
+k*is*g
+oing*o
+n.....
+
+Exp: Whkonhe*i.a*in.thsg.*e**.tcgo.
+Got: Whkonhe*i.a*in.thsg.*e**.tcgo.
+-> Encryption successful
+
+-- DECRYPTION
+Whkonhe*i.a*in.thsg.*e**.tcgo.
+
+-- by code
+What t
+he hec
+k is g
+oing o
+n.....
+
+-- by hand
+What t
+he hec
+k is g
+oing o
+n
+
+Exp: What the heck is going on
+Got: What the heck is going on
+-> Decryption successful
+
+-- Encryption
+AYB A BTU
+
+- by hand
+AYB*A*
+BTU...
+
+Got: ABYTBU*.A.*.
+
+-- Decryption
+ABYTBU*.A.*.
+
+AYB*A*
+BTU...
+
+-> AYB A BTU
+
+... OR ...
+
+ABYTBU
+*.A.*.
+
+ABYTBU
+YTBU  

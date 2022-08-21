@@ -1,0 +1,27 @@
+arrows
+→
+←
+↑
+↓
+
+4
+o o o o
+o o o o
+o o o o
+o o o o
+
+5
+o o o o o
+o o o o o
+o o o o o
+o o o o o
+o o o o o
+
+6
+→ → → → → →
+↑ → → → → ↓
+↑ ↑ → → ↓ ↓
+↑ ↑ ← ↓ ↓ ↓
+↑ ← ← ← ↓ ↓
+← ← ← ← ← ↓
+
