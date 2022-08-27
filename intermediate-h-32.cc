@@ -18,6 +18,12 @@ int main(void)
 	int len = strlen(line);
 
 	char* result = (char*)calloc(MAX_LENGTH, sizeof(char));
+	if (result == NULL)
+	{
+		printf("memory allocation failure\n");
+		return 1;
+	}
+
 	int resultIndex = 0;
 
 	int nestedLevel = 0;
@@ -27,7 +33,7 @@ int main(void)
 		char ch = line[i];
 		if (ch == '[')
 			nestedLevel++;
-		else if (ch == ']' && nestedLevel > 0)
+		else if (ch == ']')
 			nestedLevel--;
 		else if (nestedLevel == 0)
 			result[resultIndex++] = ch;

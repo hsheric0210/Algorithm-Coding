@@ -1,4 +1,4 @@
-/* 중급(上) 27. 반올림 */
+/* 중급(上) 33. 비밀번호 */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -6,37 +6,77 @@
 #include <stdlib.h>
 #include <math.h>
 
-// API 사용, 90점
-int roundAt(int input, int places)
-{
-	return (int)(rint((double)input / places) * places);
-}
-
-// 직접 구현, 100점
-int roundAt2(int input, int places)
-{
-	int mod = input % places;
-	int first = mod / (places / 10);
-	if (first >= 5)
-		return input + (places - mod);
-	return input - mod;
-}
-
 int main(void)
 {
 	FILE* in = fopen("INPUT.TXT", "r");
 	FILE* out = fopen("OUTPUT.TXT", "w");
 
 	int n = 0;
-	fscanf(in, "%u", &n);
+	fscanf(in, "%d", &n);
 
-	int i = 0;
-	int pwr = 10;
-	for (i = 1; i <= 3; i++)
+	int* passwords = (int*)calloc(n, sizeof(int));
+	for (int i = 0; i < n; i++)
 	{
-		fprintf(out, "%u\n", roundAt2(n, pwr));
-		pwr *= 10;
+		fscanf(in, "%d", passwords + i);
 	}
+
+	int input = 0;
+	fscanf(in, "%d", &input);
+	bool matches = false;
+
+	for (int i = 0; i < n; i++)
+	{
+		int divisor = 1;
+
+		bool match = true;
+		bool specialMatch = true;
+
+		bool specialChance = true;
+
+		for (int j = 0; j < 5; j++)
+		{
+			int numAt = input / divisor % 10;
+			int pwNumAt = passwords[i] / divisor % 10;
+
+			printf("[Worker #%d] Password index %d - Correct: %d Pressed: %d\n", i, j, pwNumAt, numAt);
+
+			match &= numAt == pwNumAt;
+
+			if (!match && specialChance)
+			{
+				// use chance (allow adjacent button press)
+				if (numAt == 0)
+					numAt = 11;
+
+				int candidates[4] = { pwNumAt - 1, pwNumAt + 1, pwNumAt - 3, pwNumAt + 3 };
+				for (int k = 0; k < 4; k++)
+				{
+					if (numAt == candidates[k])
+					{
+						printf("[Worker #%d] Used the special chance (pressed not correct but adjacent button).\n", i);
+						specialChance = false;
+						match = true;
+						break;
+					}
+				}
+			}
+
+			if (!match)
+			{
+				printf("[Worker #%d] Failed due to unmatch more than two times in a row.\n", i);
+				break;
+			}
+
+			divisor *= 10;
+		}
+
+		matches |= match;
+	}
+
+	if (matches)
+		fprintf(out, "OPEN");
+	else
+		fprintf(out, "CLOSE");
 
 	fclose(in);
 	fclose(out);

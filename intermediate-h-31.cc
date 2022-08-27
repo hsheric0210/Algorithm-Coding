@@ -7,47 +7,45 @@
 #include <math.h>
 #include <string.h>
 
-typedef struct _pos {
-	int column, row;
-
-	struct _pos add(struct _pos offset)
-	{
-		return { column + offset.column, row + offset.row };
-	}
-} pos;
-
-typedef struct _overflow {
-	bool column, row;
-} overflow;
-
-bool isFullyFilled(int** arr, int scale)
+bool isFull(int scale, int** arr)
 {
 	for (int i = 0; i < scale; i++)
-	{
 		for (int j = 0; j < scale; j++)
-		{
-			if (arr[i][j] <= 0)
+			if (arr[i][j] == 0)
 				return false;
-		}
-	}
-
 	return true;
 }
 
-overflow checkOverflow(pos head, int scale)
-{
-	return { head.column < 0 || head.column >= scale, head.row < 0 || head.row >= scale };
-}
-
-void printDebug(int** arr, int scale)
+void dumpArray(int scale, int** arr)
 {
 	for (int i = 0; i < scale; i++)
 	{
+		printf("[#%d] ", i + 1);
 		for (int j = 0; j < scale; j++)
 		{
 			printf("%d ", arr[i][j]);
 		}
 		printf("\n");
+	}
+}
+
+void fixOverflow(int scale, int* xpos, int* ypos)
+{
+	bool xover = *xpos >= scale;
+	bool yover = *ypos < 0;
+
+	if (xover && yover)
+	{
+		*xpos -= 1;
+		*ypos += 2;
+	}
+	else if (xover)
+	{
+		*xpos = 0;
+	}
+	else if (yover)
+	{
+		*ypos = scale - 1;
 	}
 }
 
@@ -63,61 +61,46 @@ int main(void)
 	for (int i = 0; i < scale; i++)
 		arr[i] = (int*)calloc(scale, sizeof(int));
 
-	int counter = 1;
-	pos head = { 0, 1 };
-	do
+	int xpos = (scale - 1) / 2, ypos = 0, counter = 1;
+	while (!isFull(scale, arr))
 	{
-		// move diagonally
-		head = { head.column + 1, head.row - 1 };
+		int prevX = xpos, prevY = ypos;
 
-		// check bounds
-		while (true)
+		// apply number
+		arr[ypos][xpos] = counter++;
+
+		// move cursor
+
+		xpos++;
+		ypos--;
+
+		// fix overflow
+		fixOverflow(scale, &xpos, &ypos);
+
+		// check value overwrite
+		if (arr[ypos][xpos] != 0)
 		{
-			printf("head(%d, %d)\n", head.row, head.column);
-			overflow over = checkOverflow(head, scale);
-
-			if (over.column && over.row)
-			{
-				head.column -= 1;
-				head.row -= 2;
-				continue;
-			}
-
-			if (over.column)
-			{
-				head.column = scale - 1;
-				continue;
-			}
-
-			if (over.row)
-			{
-				head.row = 0;
-				continue;
-			}
-
-			if (arr[head.column][head.row] > 0)
-			{
-				head.column -= 1;
-				head.row -= 2;
-				continue;
-			}
-
-			break;
+			xpos--;
+			ypos += 2;
 		}
 
-		arr[head.row][head.column] = counter++;
+		// re-check overflow
+		fixOverflow(scale, &xpos, &ypos);
 
-		printf("num: %d\n", counter);
-		printDebug(arr, scale);
-	} while (!isFullyFilled(arr, scale));
+		//printf("[#%d] Source = (%d, %d), Destination = (%d, %d)\n", counter, prevX, prevY, xpos, ypos);
+		//dumpArray(scale, arr);
+	}
 
 	for (int i = 0; i < scale; i++)
 	{
 		for (int j = 0; j < scale; j++)
 		{
-			printf("%d ", arr[i][j]);
+			if (j == scale - 1)
+				fprintf(out, "%d", arr[i][j]);
+			else
+				fprintf(out, "%d ", arr[i][j]);
 		}
-		printf("\n");
+		fprintf(out, "\n");
 	}
 
 	fclose(in);
