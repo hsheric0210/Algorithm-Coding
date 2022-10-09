@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="elementary-mathematics-7.retry.cc">
+    <ClCompile Include="elementary-stackAndQueue-9.cc">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
