@@ -1,4 +1,4 @@
-/* 기초 알고리즘(스택 & 큐) - 8. Josephus Problem */
+/* 기초 알고리즘(스택 & 큐) - 9. Josephus Problem */
 
 #define _CRT_SECURE_NO_WARNINGS
 
