@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="elementary-graph-5.cc">
+    <ClCompile Include="elementary-dynamic-3.cc">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
