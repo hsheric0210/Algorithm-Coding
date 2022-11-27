@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="elementary-dynamic-3.cc">
+    <ClCompile Include="boj\1149.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
