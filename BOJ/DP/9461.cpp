@@ -1,3 +1,7 @@
+/*
+파도반 수열
+https://www.acmicpc.net/problem/9461
+*/
 #include <iostream>
 #include <algorithm>
 using namespace std;

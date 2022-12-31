@@ -1,3 +1,7 @@
+/*
+RGB거리
+https://www.acmicpc.net/problem/1149
+*/
 #include <cstdio>
 #include <iostream>
 #include <algorithm>

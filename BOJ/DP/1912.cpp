@@ -1,3 +1,7 @@
+/*
+연속합
+https://www.acmicpc.net/problem/1912
+*/
 #include <iostream>
 #include <algorithm>
 using namespace std;

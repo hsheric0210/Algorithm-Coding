@@ -1,3 +1,7 @@
+/*
+부녀회장이 될테야
+https://www.acmicpc.net/problem/2775
+*/
 #include <cstdio>
 #include <iostream>
 #include <algorithm>
