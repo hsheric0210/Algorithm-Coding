@@ -1,6 +1,7 @@
 /*
 효율적인 해킹
 https://www.acmicpc.net/problem/1325
+BFS+DP
 */
 #include <iostream>
 #include <algorithm>
@@ -15,11 +16,12 @@ typedef struct _entry {
 	int id;
 	int depth;
 } entry;
+map<int, entry> depthCache;
 entry dfs(int parent)
 {
 	deque<entry> q;
-	q.push_front({ parent, 1 });
-	int maxDepth = 1;
+	q.push_back({ parent, 1 });
+	entry maxDepth = { parent, 1 };
 	while (!q.empty())
 	{
 		entry front = q.front();
@@ -29,18 +31,27 @@ entry dfs(int parent)
 			set<int> linked = theMap[front.id];
 			for (auto a = linked.begin(); a != linked.end(); a++)
 			{
-				int newDepth = front.depth + 1;
-				q.push_front({ *a, newDepth });
-				if (newDepth > maxDepth)
-					maxDepth = newDepth;
+				int newDepth;
+				if (depthCache.find(*a) != depthCache.end())
+				{
+					newDepth = depthCache[*a].depth;
+					q.push_back({ *a, });
+				}
+				else
+				{
+					newDepth = front.depth + 1;
+					q.push_back({ *a, newDepth });
+				}
+				if (newDepth > maxDepth.depth)
+					maxDepth = { *a, newDepth };
 			}
 		}
 	}
-	return { parent, maxDepth };
+	return maxDepth;
 }
-int depthCmp(entry a, entry b)
+int depthCmp(pair<int, entry> a, pair<int, entry> b)
 {
-	return a.depth < b.depth;
+	return a.second.depth < b.second.depth;
 }
 int idCmp(entry a, entry b)
 {
@@ -62,15 +73,16 @@ int main()
 	}
 
 	// using dfs to find 'maximum depth'
-	entry* entries = new entry[n]{ 0 };
 	for (int i = 0; i < n; i++)
-		entries[i] = dfs(i + 1);
+	{
+		depthCache[i] = dfs(i + 1);
+	}
 
-	int maxDepth = max_element(entries, entries + n, depthCmp)->depth;
+	int maxDepth = max_element(depthCache.begin(), depthCache.end(), depthCmp)->second.depth;
 	vector<int> filteredEntries;
 	for (int i = 0; i < n; i++)
-		if (entries[i].depth == maxDepth)
-			filteredEntries.push_back(entries[i].id);
+		if (depthCache[i].depth == maxDepth)
+			filteredEntries.push_back(depthCache[i].id);
 	sort(filteredEntries.begin(), filteredEntries.end());
 	for (auto a = filteredEntries.begin(); a != filteredEntries.end(); a++)
 		cout << *a << ' ' << endl;
