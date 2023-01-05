@@ -7,41 +7,41 @@ https://m.blog.naver.com/lovysunny7/221623688183
 #include <stdio.h>
 #include <iomanip>
 using namespace std;
-int mlt[12] = { 31, -1, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-bool islp(int y)
+int monthLengthLookup[12] = { 31, -1, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+bool isLeapYear(int year)
 {
-	return y % 4 == 0 && y % 100 != 0 || y % 400 == 0;
+	return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
 }
-int mlen(int y, int m)
+int lengthOfMonth(int year, int month)
 {
-	int d = mlt[m - 1];
-	if (d < 0) d = islp(y) ? 29 : 28;
+	int d = monthLengthLookup[month - 1];
+	if (d < 0) d = isLeapYear(year) ? 29 : 28;
 	return d;
 }
-long long tday(int y, int m, int d)
+long long totalDays(int year, int month, int day)
 {
 	long long t = 0;
-	for (int i = 1; i < y; i++)
-		t += islp(i) ? 366 : 365;
-	for (int i = 1; i < m; i++) t += mlen(y, i);
-	return t + d;
+	for (int i = 1; i < year; i++)
+		t += isLeapYear(i) ? 366 : 365;
+	for (int i = 1; i < month; i++) t += lengthOfMonth(year, i);
+	return t + day;
 }
-int wday(int y, int m, int d)
+int weekDayOf(int year, int month, int day)
 {
-	return tday(y, m, d) % 7;
+	return totalDays(year, month, day) % 7;
 }
 int main()
 {
 	char ch; int y, m; cin >> y >> ch >> m;
 
 	// 1st day padding
-	for (int i = 0; i < wday(y, m, 1); i++)
+	for (int i = 0; i < weekDayOf(y, m, 1); i++)
 		cout << "   ";
-	for (int i = 1; i <= mlen(y, m); i++)
+	for (int i = 1; i <= lengthOfMonth(y, m); i++)
 	{
 		cout << setw(3) << i;
-		if (wday(y, m, i) == 6 // 금요일
-			&& mlen(y, m) != i // 당월 마지막 날 아님
+		if (weekDayOf(y, m, i) == 6 // 금요일
+			&& lengthOfMonth(y, m) != i // 당월 마지막 날 아님
 			)
 			cout << endl;
 	}
