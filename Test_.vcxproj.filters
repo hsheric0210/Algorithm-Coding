@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AJIT-new\80012.cpp">
+    <ClCompile Include="AJIT-new\Mid\3174.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

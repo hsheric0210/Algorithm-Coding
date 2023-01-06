@@ -7,7 +7,7 @@ https://43.200.211.173/contest/17/problem/80012
 #include <cmath>
 #include <vector>
 using namespace std;
-int* decompose(int n, int l)
+int* de(int n, int l)
 {
 	int* arr = new int[l] {0};
 	int mul = 1;
@@ -18,7 +18,7 @@ int* decompose(int n, int l)
 	}
 	return arr;
 }
-int recompose(int* de, int l)
+int re(int* de, int l)
 {
 	int ans = 0, mul = 1;
 	for (int i = 0; i < l; i++)
@@ -32,22 +32,20 @@ int main()
 {
 	int n; cin >> n;
 	int l = (int)ceil(log10(n));
-	int np = -1;
 	vector<int> c;
 	c.push_back(n);
 	while (true)
 	{
-		int* asc = decompose(n, l);
-		int* desc = new int[l] {0};
-		copy(asc, asc + l, desc);
-		sort(asc, asc + l, greater<int>());
-		sort(desc, desc + l, less<int>());
-		int g = recompose(asc, l) - recompose(desc, l);
+		int* as = de(n, l);
+		int* ds = new int[l] {0};
+		copy(as, as + l, ds);
+		sort(as, as + l, greater<int>());
+		sort(ds, ds + l, less<int>());
+		int g = re(as, l) - re(ds, l);
 		n = g;
-		if (np == g)
+		if (find(c.begin(), c.end(), n) != c.end())
 			break;
 		c.push_back(g);
-		np = g;
 	}
 	cout << c.size() << endl;
 	for (auto i = c.begin(); i != c.end(); i++)
