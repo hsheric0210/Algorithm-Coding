@@ -4,23 +4,21 @@ https://43.200.211.173/contest/17/problem/80010
 */
 #include <iostream>
 using namespace std;
+int n, i, d, c = 1;
 int main()
 {
-	int n; cin >> n;
-	int c = 1;
-	for (int i = 0; i < n; i++)
+	cin >> n;
+	for (i = 0; i < n; i++)
 	{
-		int d; cin >> d;
-		switch (d)
+		cin >> d;
+		if (d == 0)
 		{
-		case 0:
-			if (c % 2 != 0)
-				c--;
+			if (c % 2 != 0) c--;
 			c /= 2;
-			break;
-		case 1:
+		}
+		else if (d == 1)
+		{
 			c *= 3;
-			break;
 		}
 	}
 	cout << c << endl;

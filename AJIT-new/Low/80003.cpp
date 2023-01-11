@@ -5,9 +5,10 @@ https://blockdmask.tistory.com/196
 */
 #include <iostream>
 using namespace std;
+int n, a, b, c, d = 0;
 int main()
 {
-	int n, a, b, c, d = 0; cin >> n;
+	cin >> n;
 	if (!(n < 3 || n == 4))
 		for (a = 1; a <= n / 3; a++) // a: 1..(n/3)
 		{

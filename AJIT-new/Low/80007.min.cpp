@@ -6,10 +6,11 @@ C-Minifier-friendly version
 #include <iostream>
 #include <cmath>
 using namespace std;
+int a, b, c, i;
 int p(int n)
 {
 	if (n == 1) return false;
-	for (int i = 2; i < n; i++) // exclude 1, n
+	for (i = 2; i < n; i++) // exclude 1, n
 		if (n % i == 0)
 			return false;
 	return true;
@@ -17,13 +18,13 @@ int p(int n)
 int main()
 {
 	cin.sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	int c; cin >> c;
+	c; cin >> c;
 	int* ps = new int[c] {0};
-	for (int a = 2; a <= c; a++)
+	for (a = 2; a <= c; a++)
 	{
 		if (p(a))
 		{
-			int b = c - a;
+			b = c - a;
 			if (p(b))
 			{
 				cout << c << " = " << a << " + " << b << endl;

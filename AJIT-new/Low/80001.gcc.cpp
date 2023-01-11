@@ -6,17 +6,14 @@ https://43.200.211.173/contest/17/problem/80001
 #include <string>
 #include <algorithm>
 using namespace std;
+int n, m, x, y; string s;
 int main()
 {
-	int n; cin >> n;
-	string s; cin >> s;
-	int c; cin >> c; 
-	for (int l = 0; l < c; l++)
+	cin >> n >> s >> m;
+	for (int l = 0; l < m; l++)
 	{
-		int i, j; cin >> i >> j;
-		int t = i;
-		i = min(i, j); j = max(t, j); // failsafe
-		reverse(s.begin() + i - 1, s.begin() + j);
+		cin >> x >> y;
+		reverse(s.begin() + min(x, y) - 1, s.begin() + max(x, y));
 	}
 	cout << s << endl;
 	return 0;

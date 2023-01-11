@@ -8,6 +8,7 @@ C-Minifier-friendly version
 #include <stdio.h>
 #include <iomanip>
 using namespace std;
+int i, j;
 int ml[12] = { 31, -1, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 bool ly(int y) { return y % 4 == 0 && y % 100 != 0 || y % 400 == 0; }
 int lm(int y, int m)
@@ -19,16 +20,16 @@ int lm(int y, int m)
 long long td(int y, int m, int d)
 {
 	long long t = 0;
-	for (int i = 1; i < y; i++) t += ly(i) ? 366 : 365;
-	for (int i = 1; i < m; i++) t += lm(y, i);
+	for (j = 1; j < y; j++) t += ly(j) ? 366 : 365;
+	for (j = 1; j < m; j++) t += lm(y, j);
 	return t + d;
 }
 int wd(int y, int m, int d) { return td(y, m, d) % 7; }
 int main()
 {
 	char c; int y, m; cin >> y >> c >> m;
-	for (int i = 0; i < wd(y, m, 1); i++) cout << "   ";
-	for (int i = 1; i <= lm(y, m); i++)
+	for (i = 0; i < wd(y, m, 1); i++) cout << "   ";
+	for (i = 1; i <= lm(y, m); i++)
 	{
 		cout << setw(3) << i;
 		if (wd(y, m, i) == 6 && lm(y, m) != i)

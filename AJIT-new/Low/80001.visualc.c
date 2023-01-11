@@ -6,13 +6,16 @@ https://43.200.211.173/contest/17/problem/80001
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+int n, m;
+char* s;
 int main()
 {
-	int n; scanf("%d", &n);
-	char* s = (char*)calloc(n, sizeof(char)); scanf("%s", s);
-	int c; scanf("%d", &c);
-	for (int l = 0; l < c; l++)
+	scanf("%d", &n);
+	s = (char*)calloc(n, sizeof(char)); scanf("%s", s);
+	scanf("%d", &m);
+	for (int l = 0; l < m; l++)
 	{
+		// FIXME: i, j can be reversed
 		int i, j; scanf("%d %d", &i, &j);
 		int off = i - 1;
 		int len = j - i + 1;

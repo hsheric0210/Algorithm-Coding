@@ -6,42 +6,42 @@ https://43.200.211.173/contest/17/problem/80016
 #include <algorithm>
 #include <cmath>
 using namespace std;
-int n, m;
-typedef struct _candy
+int n, m, i = 0, z = 0;
+double x = 0.0;
+typedef struct _s // candy
 {
-	int a; int b; int maxcnt;
-} candy;
-bool cm(candy a, candy b) { return a.a * ((double)m / a.b) < b.a * ((double)m / b.b); }
+	int a; int b; int c;
+} s;
+bool cm(s a, s b) { return a.a * ((double)m / a.b) < b.a * ((double)m / b.b); }
 int main()
 {
 	cin >> n >> m;
-	candy* cs = new candy[n];
-	for (int i = 0; i < n; i++)
+	s* sa = new s[n];
+	for (i = 0; i < n; i++)
 	{
 		int a, b, c;
 		cin >> a >> b >> c;
-		cs[i] = { a,b,c };
+		sa[i] = { a,b,c };
 	}
-	sort(cs, cs + n, cm);
-	int cap = m, i = 0, cnt = 0;
-	double cost = 0.0;
-	while (cap > 0)
+	sort(sa, sa + n, cm);
+	int y = m; i = 0;
+	while (y > 0)
 	{
-		if (cnt >= cs[i].maxcnt)
+		if (z >= sa[i].c)
 		{
-			cnt = 0; i++;
+			z = 0; i++;
 		}
-		if (cap >= cs[i].b)
+		if (y >= sa[i].b)
 		{
-			cost += cs[i].a;
-			cap -= cs[i].b;
+			x += sa[i].a;
+			y -= sa[i].b;
 		}
-		else if (cap > 0)
+		else if (y > 0)
 		{
-			cost += cs[i].a * ((double)cap / cs[i].b);
-			cap -= cap;
+			x += sa[i].a * ((double)y / sa[i].b);
+			y -= y;
 		}
-		cnt++;
+		z++;
 	}
-	cout << (int)ceil(cost) << endl;
+	cout << (int)ceil(x) << endl;
 }

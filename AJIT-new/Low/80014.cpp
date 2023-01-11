@@ -6,42 +6,43 @@ https://43.200.211.173/contest/17/problem/80014
 #include <algorithm>
 #include <deque>
 using namespace std;
+int n, d, b, i, t;
 int main()
 {
-	int n; cin >> n;
-	deque<int> in, line, bypass;
-	for (int i = 0; i < n; i++)
+	cin >> n;
+	deque<int> iq, oq, bq;
+	for (i = 0; i < n; i++)
 	{
-		int d; cin >> d; in.push_back(d);
+		cin >> d; iq.push_back(d);
 	}
-	while (!in.empty() || !bypass.empty())
+	while (!iq.empty() || !bq.empty())
 	{
-		int targetNumber = line.empty() ? 1 : line.back() + 1;
-		if (!bypass.empty())
+		t = oq.empty() ? 1 : oq.back() + 1;
+		if (!bq.empty())
 		{
-			int btop = bypass.front();
-			if (btop == targetNumber)
+			b = bq.front();
+			if (b == t)
 			{
-				bypass.pop_front();
-				line.push_back(btop);
+				bq.pop_front();
+				oq.push_back(b);
 				continue; // succeed to push
 			}
-			else if (in.empty())
+			else if (iq.empty())
 			{
 				break; // failed
 			}
 		}
-		if (!in.empty())
+		if (!iq.empty())
 		{
-			int itop = in.front();
-			in.pop_front();
-			if (itop == targetNumber)
-				line.push_back(itop);
+			i = iq.front();
+			iq.pop_front();
+			if (i == t)
+				oq.push_back(i);
 			else
-				bypass.push_back(itop);
+				bq.push_back(i);
 		}
 	}
-	if (line.size() == n)
+	if (oq.size() == n)
 		cout << "YES" << endl;
 	else
 		cout << "NO" << endl;
