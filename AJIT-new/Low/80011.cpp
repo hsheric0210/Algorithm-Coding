@@ -5,55 +5,25 @@ https://43.200.211.173/contest/17/problem/80011
 #include <iostream>
 #include <algorithm>
 using namespace std;
-typedef struct _ant
-{
-	int pos; char dir;
-} ant;
 int main()
 {
-	int l, t, n; cin >> l >> t >> n;
-	ant* arr = new ant[n]{ 0 };
-	for (int i = 0; i < n; i++)
+	//cin.sync_with_stdio(0); cin.tie(0); cout.tie(0);
+	int l, t, n, p, i; char d; cin >> l >> t >> n;
+	int* q = new int[n] {0};
+	for (i = 0; i < n; i++)
 	{
-
-		int p; char d; cin >> p >> d;
-		arr[i] = { p,d };
-	}
-
-	// simulation
-	for (int i = 0; i < t; i++)
-	{
-		// move
-		for (int j = 0; j < n; j++)
+		cin >> p >> d;
+		int e = t + p * (d == 'L' ? -1 : 1);
+		auto dv = div(e, l);
+		q[i] = (dv.quot % 2 == 0) ? dv.rem : l - dv.rem;
+		if (q[i] < 0)
 		{
-			ant* a = arr + j;
-			a->pos += a->dir == 'D' ? 1 : -1;
+			//cout << "Warn: q[i] <= 0 : " << q[i] << " on dv.q=" << dv.quot << ", dv.r=" << dv.rem << ", e=" << e << ", l=" << l << ", p=" << p << ", t=" << t << endl;
+			q[i] = -q[i];
 		}
-		// collision check
-		ant** positions = new ant * [l + 1]{ 0 };
-		for (int j = 0; j < n; j++)
-		{
-			ant* a = arr + j;
-			ant* prev = positions[a->pos];
-			if (prev == 0) // empty
-				positions[a->pos] = a;
-			else
-			{
-				// collision
-
-				// change dir
-				prev->dir = prev->dir == 'L' ? 'D' : 'L';
-				a->dir = a->dir == 'L' ? 'D' : 'L';
-
-				// move one block
-				prev->pos += prev->dir == 'D' ? 1 : -1;
-				a->pos += a->dir == 'D' ? 1 : -1;
-			}
-		}
-		delete[] positions;
 	}
-
-	for (auto i = 0; i < n; i++)
-		cout << arr[i].pos << ' ';
-	cout << endl;
+	sort(q, q + n);
+	for (i = 0; i < n; i++)
+		cout << q[i] << ' ';
+	cout.flush();
 }

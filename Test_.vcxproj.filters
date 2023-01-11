@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AJIT-new\Low\80021.cpp">
+    <ClCompile Include="AJIT-new\Low\80024-validator.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

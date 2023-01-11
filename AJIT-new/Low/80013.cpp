@@ -1,24 +1,40 @@
 /*
-개미
-https://43.200.211.173/contest/17/problem/80011
+야구경기
+https://43.200.211.173/contest/17/problem/80013
 */
 #include <iostream>
 #include <algorithm>
+#include <cstring>
+#include <cstdlib>
+#include <cfloat>
 using namespace std;
 int main()
 {
-	//cin.sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	int l, t, n, p, i; char d; cin >> l >> t >> n;
-	int* q = new int[n] {0};
-	for (i = 0; i < n; i++)
+	char* _n = new char[5];
+	cin.getline(_n, 5);
+	int n = atoi(_n);
+	char* s = new char[n + 1]{ 0 };
+	cin.getline(s, n + 1);
+	int sl = strlen(s);
+
+	double amin = DBL_MAX, amax = 0;
+	int iamin = -1, iamax = -1, sum = 0;
+	for (int pos = 0; s[pos] != 0; pos++)
 	{
-		cin >> p >> d;
-		int e = t + p * (d == 'L' ? -1 : 1);
-		auto dv = div(e, l);
-		q[i] = (dv.quot % 2 == 0) ? dv.rem : l - dv.rem;
+		sum += s[pos] == 'W';
+		if (pos < 2)
+			continue;
+		double avg = (double)sum / (pos + 1);
+		if (avg <= amin)
+		{
+			amin = avg;
+			iamin = pos + 1;
+		}
+		if (avg >= amax)
+		{
+			amax = avg;
+			iamax = pos + 1;
+		}
 	}
-	sort(q, q + n);
-	for (i = 0; i < n; i++)
-		cout << q[i] << ' ';
-	cout.flush();
+	cout << iamax << ' ' << iamin << endl;
 }
