@@ -1,26 +1,20 @@
 /*
-소들의 시위
+소들의 시위 (***)
 https://43.200.211.173/contest/17/problem/80022
 */
 #include <iostream>
 #include <algorithm>
-#include <deque>
 using namespace std;
-typedef struct _cow
-{
-	int i; int ai;
-} cow;
-bool cm(cow a, cow b) { return a.ai > b.ai; }
+int n, i, j;
 int main()
 {
-	int n; cin >> n;
-	deque<cow> q;
-	for (int i = 0; i < n; i++)
-	{
-		int ai;  cin >> ai;
-		cow c = { i, ai };
-		q.push_back(c);
-	}
-	sort(q.begin(), q.end(), cm);
-	
+	cin >> n;
+	int* arr = new int[n + 1]{ 0 };
+	int* sum = new int[n + 1]{ 0 };
+	long long* dp = new long long[n + 1]{ 0 };
+	dp[0] = 1;
+	for (i = 1; i <= n; i++) cin >> arr[i];
+	for (i = 1; i <= n; i++) sum[i] = sum[i - 1] + arr[i];
+	for (i = 1; i <= n; i++) for (j = 0; j < i; j++) if (sum[i] - sum[j] >= 0) dp[i] = (dp[i] + dp[j]) % 1000000009;
+	cout << *max_element(dp + 1, dp + n + 1) % 1000000009 << endl;
 }
