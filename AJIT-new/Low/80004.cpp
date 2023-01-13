@@ -1,5 +1,5 @@
 /*
-¸¸³â´Þ·Â ¸¸µé±â
+ë§Œë…„ë‹¬ë ¥ ë§Œë“¤ê¸°
 https://43.200.211.173/contest/17/problem/80004
 https://m.blog.naver.com/lovysunny7/221623688183
 */
@@ -32,8 +32,8 @@ int main()
 	for (int i = 1; i <= lengthOfMonth(year, month); i++)
 	{
 		cout << setw(3) << i;
-		if (weekDayOf(year, month, i) == 6 // ±Ý¿äÀÏ
-			&& lengthOfMonth(year, month) != i // ´ç¿ù ¸¶Áö¸· ³¯ ¾Æ´Ô
+		if (weekDayOf(year, month, i) == 6 // ê¸ˆìš”ì¼
+			&& lengthOfMonth(year, month) != i // ë‹¹ì›” ë§ˆì§€ë§‰ ë‚  ì•„ë‹˜
 			)
 			cout << endl; // newline
 	}

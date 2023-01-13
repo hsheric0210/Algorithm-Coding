@@ -9,8 +9,8 @@ https://43.200.211.173/contest/17/problem/80006
 using namespace std;
 int main()
 {
-	int m = 1 // Ãß·Ğ °¡´ÉÇÑ ¼öÀÇ ÃÖ¼Ú°ª
-		, M = 10 // Ãß·Ğ °¡´ÉÇÑ ¼öÀÇ ÃÖ´ñ°ª
+	int m = 1 // ì¶”ë¡  ê°€ëŠ¥í•œ ìˆ˜ì˜ ìµœì†Ÿê°’
+		, M = 10 // ì¶”ë¡  ê°€ëŠ¥í•œ ìˆ˜ì˜ ìµœëŒ“ê°’
 		, s = 0; // If the imposter is SUS
 	int n;
 	char str[50]{ 0 };

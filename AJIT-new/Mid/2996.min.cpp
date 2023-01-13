@@ -1,5 +1,5 @@
 /*
-°øÁÖ´ÔÀÇ Á¤¿ø
+ê³µì£¼ë‹˜ì˜ ì •ì›
 https://43.200.211.173/contest/17/problem/2996
 C-Minifier friendly version
 */

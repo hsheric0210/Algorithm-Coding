@@ -1,5 +1,5 @@
 /*
-а╬юлюз╦ё╠Б
+Л╒┘Л²╢Л·░К╔╢Й╦╟
 https://43.200.211.173/contest/17/problem/1779
 */
 #define _CRT_SECURE_NO_WARNINGS

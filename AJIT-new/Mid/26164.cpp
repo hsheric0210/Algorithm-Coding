@@ -1,5 +1,5 @@
 /*
-µÅÁö Àú±İÅë
+ë¼ì§€ ì €ê¸ˆí†µ
 https://43.200.211.173/contest/17/problem/26164
 */
 #include <iostream>
@@ -14,7 +14,7 @@ typedef struct _testcase
 //#define DBG
 int main()
 {
-	// tw(=f-e) : ÃÑ µ¿ÀüÀÇ ¹«°Ô
+	// tw(=f-e) : ì´ ë™ì „ì˜ ë¬´ê²Œ
 	int e, f, n; cin >> e >> f >> n; int tw = f - e;
 
 	testcase* tc = new testcase[n];

@@ -1,7 +1,7 @@
 /*
-±âÂ÷ ±³Â÷·Î
+ê¸°ì°¨ êµì°¨ë¡œ
 https://43.200.211.173/contest/17/problem/827
-³ú »©³õ°í Ç®¾ú´Âµ¥ Ç®¸² ¤»¤»; (µð¹ö±ë 1¹øµµ ¾ÈÇÏ°í Å×½ºÆ®µµ ¾ÈÇØº¸°í ±×´ë·Î Á¦ÃâÇß´Âµ¥ OK¶ä)
+ë‡Œ ë¹¼ë†“ê³  í’€ì—ˆëŠ”ë° í’€ë¦¼ ã…‹ã…‹; (ë””ë²„ê¹… 1ë²ˆë„ ì•ˆí•˜ê³  í…ŒìŠ¤íŠ¸ë„ ì•ˆí•´ë³´ê³  ê·¸ëŒ€ë¡œ ì œì¶œí–ˆëŠ”ë° OKëœ¸)
 */
 #include <iostream>
 #include <algorithm>

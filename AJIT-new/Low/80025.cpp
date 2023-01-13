@@ -1,5 +1,5 @@
 /*
-È¸ÀÇ½Ç ¹èÁ¤(room)
+íšŒì˜ì‹¤ ë°°ì •(room)
 https://43.200.211.173/contest/17/problem/80025
 */
 #include <iostream>

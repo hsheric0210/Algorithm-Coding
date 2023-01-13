@@ -1,5 +1,5 @@
 /*
-¹®ÀÚ¿­ ±¸°£µÚÁý±â
+ë¬¸ìžì—´ êµ¬ê°„ë’¤ì§‘ê¸°
 https://43.200.211.173/contest/17/problem/80001
 */
 #define _CRT_SECURE_NO_WARNINGS

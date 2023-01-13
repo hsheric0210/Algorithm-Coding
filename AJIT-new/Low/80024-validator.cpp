@@ -1,5 +1,5 @@
 /*
-SCV ÀÚ¿øÃ¤Ãë
+SCV ìì›ì±„ì·¨
 https://43.200.211.173/contest/17/problem/80024
 */
 #define _CRT_SECURE_NO_WARNINGS

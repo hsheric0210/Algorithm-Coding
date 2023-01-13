@@ -1,5 +1,5 @@
 /*
-¼ÒµéÀÇ ½ÃÀ§ (***)
+ì†Œë“¤ì˜ ì‹œìœ„ (***)
 https://43.200.211.173/contest/17/problem/80022
 */
 #include <iostream>
@@ -11,10 +11,26 @@ int main()
 	cin >> n;
 	int* arr = new int[n + 1]{ 0 };
 	int* sum = new int[n + 1]{ 0 };
-	long long* dp = new long long[n + 1]{ 0 };
-	dp[0] = 1;
-	for (i = 1; i <= n; i++) cin >> arr[i];
-	for (i = 1; i <= n; i++) sum[i] = sum[i - 1] + arr[i];
-	for (i = 1; i <= n; i++) for (j = 0; j < i; j++) if (sum[i] - sum[j] >= 0) dp[i] = (dp[i] + dp[j]) % 1000000009;
-	cout << *max_element(dp + 1, dp + n + 1) % 1000000009 << endl;
+	int* groups = new int[n + 1]{ 0 };
+	sum[0] = 0;
+	groups[0] = 1;
+	for (i = 1; i <= n; i++)
+		cin >> arr[i];
+
+	for (i = 1; i <= n; i++)
+	{
+		sum[i] = sum[i - 1] + arr[i];
+	}
+
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 0; j < i; j++)
+		{
+			if (sum[i] - sum[j] >= 0)
+			{
+				groups[i] += groups[j];
+			}
+		}
+	}
+	cout << *max_element(groups + 1, groups + n + 1) << endl;
 }

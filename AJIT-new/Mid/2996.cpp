@@ -1,5 +1,5 @@
 /*
-°øÁÖ´ÔÀÇ Á¤¿ø
+ê³µì£¼ë‹˜ì˜ ì •ì›
 https://43.200.211.173/contest/17/problem/2996
 */
 #include <iostream>
@@ -41,7 +41,7 @@ int main()
 	int max = -1, max_index = -1;
 	for (int i = 0; i < n; i++)
 	{
-		// 1¿ù1ÀÏ until 3¿ù1ÀÏ
+		// 1ì›”1ì¼ until 3ì›”1ì¼
 		if (arr[i].begin > march1st)
 			break;
 		if (arr[i].end > max)
@@ -60,7 +60,7 @@ int main()
 		for (int i = max_index + 1; i < n; i++)
 		{
 			// (max_index+1) until prev_max
-			if (arr[i].begin >= prev_max + 1) // ³» 1½Ã°£ 30ºĞÀ» ³¯¸° ¿øÈä: ¿©±â¿¡ +1À» ¹İµå½Ã ºÙ¿©¾ß Çß¾ú´Ù.
+			if (arr[i].begin >= prev_max + 1) // ë‚´ 1ì‹œê°„ 30ë¶„ì„ ë‚ ë¦° ì›í‰: ì—¬ê¸°ì— +1ì„ ë°˜ë“œì‹œ ë¶™ì—¬ì•¼ í–ˆì—ˆë‹¤.
 				break;
 			if (arr[i].end > max)
 			{

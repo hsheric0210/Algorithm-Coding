@@ -1,5 +1,5 @@
 /*
-¼ıÀÚ »ç½½
+ìˆ«ì ì‚¬ìŠ¬
 https://43.200.211.173/contest/17/problem/80012
 */
 #include <iostream>

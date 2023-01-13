@@ -1,5 +1,5 @@
 /*
-¸¸³¯ °¡´É¼º Ã¼Å©
+ë§Œë‚  ê°€ëŠ¥ì„± ì²´í¬
 https://43.200.211.173/contest/17/problem/80005
 */
 #include <iostream>
@@ -10,7 +10,7 @@ typedef struct _closedRange
 {
 	int min; // inclusive
 	int max; // inclusive
-} closedRange; // ´İÈù ±¸°£
+} closedRange; // ë‹«íŒ êµ¬ê°„
 closedRange intersect(closedRange a, closedRange b)
 {
 	// range check

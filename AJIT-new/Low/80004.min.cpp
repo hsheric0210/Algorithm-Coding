@@ -1,5 +1,5 @@
 /*
-¸¸³â´Þ·Â ¸¸µé±â
+ë§Œë…„ë‹¬ë ¥ ë§Œë“¤ê¸°
 https://43.200.211.173/contest/17/problem/80004
 https://m.blog.naver.com/lovysunny7/221623688183
 C-Minifier-friendly version

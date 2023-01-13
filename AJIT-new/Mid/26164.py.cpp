@@ -1,7 +1,7 @@
 /*
-µÅÁö Àú±İÅë
+ë¼ì§€ ì €ê¸ˆí†µ
 https://43.200.211.173/contest/17/problem/26164
-26164.py·ÎºÎÅÍ Æ÷ÆÃµÊ
+26164.pyë¡œë¶€í„° í¬íŒ…ë¨
 */
 #include <iostream>
 #include <algorithm>
