@@ -1,4 +1,4 @@
-/* �߱�(߾) 10. modulo */
+/* 중급(上) 10. modulo */
 
 #define _CRT_SECURE_NO_WARNINGS
 

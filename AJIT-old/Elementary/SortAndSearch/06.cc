@@ -1,4 +1,4 @@
-/* ±âÃÊ ¾Ë°í¸®Áò(Å½»ö°ú Á¤·Ä) - 6. ¼øÀ§¸Å±â±â */
+/* ê¸°ì´ˆ ì•Œê³ ë¦¬ì¦˜(íƒìƒ‰ê³¼ ì •ë ¬) - 6. ìˆœìœ„ë§¤ê¸°ê¸° */
 
 #define _CRT_SECURE_NO_WARNINGS
 

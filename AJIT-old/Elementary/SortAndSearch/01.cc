@@ -1,4 +1,4 @@
-/* ±âÃÊ ¾Ë°í¸®Áò(Å½»ö°ú Á¤·Ä) - 1. Gas Station Numbers */
+/* ê¸°ì´ˆ ì•Œê³ ë¦¬ì¦˜(íƒìƒ‰ê³¼ ì •ë ¬) - 1. Gas Station Numbers */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -92,7 +92,7 @@ int main(void)
 				if (found >= 0)
 					break;
 			}
-			// °­Á¦·Î ¸¶Áö¸·À¸·ÎºÎÅÍ µÎ ¹øÂ° ¿ø¼Ò¿Í ¸¶Áö¸· ¿ø¼Ò »çÀÌ¿¡ Á¡ »ðÀÔ
+			// ê°•ì œë¡œ ë§ˆì§€ë§‰ìœ¼ë¡œë¶€í„° ë‘ ë²ˆì§¸ ì›ì†Œì™€ ë§ˆì§€ë§‰ ì›ì†Œ ì‚¬ì´ì— ì  ì‚½ìž…
 			if (i == len - 2)
 				fprintf(out, ".");
 			fprintf(out, "%d", found);

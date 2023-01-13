@@ -14,13 +14,13 @@ int main(int argc, char** argv) {
 	for (caseIndex = 0; caseIndex < caseCount; caseIndex++) {
 		fscanf(in, "%d %d %d %d", &chickenPrice, &totalMoney, &requiredCouponCountToOrder, &recvCouponPerOrder);
 
-		totalCouponCount = totalMoney / chickenPrice * recvCouponPerOrder; //Ä¡Å²»ç°í ¹ŞÀº ÃÑ ÄíÆù¼ö
+		totalCouponCount = totalMoney / chickenPrice * recvCouponPerOrder; //ì¹˜í‚¨ì‚¬ê³  ë°›ì€ ì´ ì¿ í°ìˆ˜
 
-		orderedChickenByOrder = totalCouponCount / requiredCouponCountToOrder; //´Ü°ñ ¾Æ´Ñ ÇĞ»ıÀÇ ÄíÆùÀ¸·Î »ê ´ßÀÇ ¸¶¸®¼ö
+		orderedChickenByOrder = totalCouponCount / requiredCouponCountToOrder; //ë‹¨ê³¨ ì•„ë‹Œ í•™ìƒì˜ ì¿ í°ìœ¼ë¡œ ì‚° ë‹­ì˜ ë§ˆë¦¬ìˆ˜
 
 		for (orderedChickenTotalByCoupon = 0; totalCouponCount >= requiredCouponCountToOrder; orderedChickenTotalByCoupon++)
 		{
-			// ¾îÂ÷ÇÇ F°³ÀÇ ÄíÆùÀ¸·Î ¹«·á Ä¡Å²À» ÁÖ¹®ÇØµµ ´Ù½Ã ÄíÆùÀ» C°³ ÁÖ´Ï±î Ã³À½ºÎÅÍ ÃÑ ÄíÆù °¹¼ö¿¡¼­ F-C °³ ¸¸Å­¸¸ »©µµ ½ÄÀº ¼º¸³.
+			// ì–´ì°¨í”¼ Fê°œì˜ ì¿ í°ìœ¼ë¡œ ë¬´ë£Œ ì¹˜í‚¨ì„ ì£¼ë¬¸í•´ë„ ë‹¤ì‹œ ì¿ í°ì„ Cê°œ ì£¼ë‹ˆê¹Œ ì²˜ìŒë¶€í„° ì´ ì¿ í° ê°¯ìˆ˜ì—ì„œ F-C ê°œ ë§Œí¼ë§Œ ë¹¼ë„ ì‹ì€ ì„±ë¦½.
 			totalCouponCount -= (requiredCouponCountToOrder - recvCouponPerOrder);
 			// totalCouponCount -= requiredCouponCountToOrder; totalCouponCount += recvCouponPerOrder;
 		}

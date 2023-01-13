@@ -1,4 +1,4 @@
-/* �߱�(߾) 22. ���ڹ츸��� */
+/* 중급(上) 22. 숫자뱀만들기 */
 
 #define _CRT_SECURE_NO_WARNINGS
 

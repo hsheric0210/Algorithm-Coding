@@ -1,4 +1,4 @@
-/* ±âÃÊ ¾Ë°í¸®Áò(½ºÅÃ & Å¥) - 9. Josephus Problem */
+/* ê¸°ì´ˆ ì•Œê³ ë¦¬ì¦˜(ìŠ¤íƒ & í) - 9. Josephus Problem */
 
 #define _CRT_SECURE_NO_WARNINGS
 

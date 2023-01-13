@@ -1,4 +1,4 @@
-/* Áß±Ş(ß¾) 36. Ä«µå°ÔÀÓ */
+/* ì¤‘ê¸‰(ä¸Š) 36. ì¹´ë“œê²Œì„ */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -42,10 +42,10 @@ int min(int a, int b)
 }
 
 /// <summary>
-/// Ä«µåÀÇ ¼ıÀÚ°¡ ¿¬¼ÓÀûÀ¸·Î ¹èÄ¡µÇ¾î ÀÖ´ÂÁö¸¦ °Ë»ç
+/// ì¹´ë“œì˜ ìˆ«ìê°€ ì—°ì†ì ìœ¼ë¡œ ë°°ì¹˜ë˜ì–´ ìˆëŠ”ì§€ë¥¼ ê²€ì‚¬
 /// </summary>
-/// <param name="cards">¼ıÀÚ ¼ø¼­·Î ¿À¸§Â÷¼ø ¶Ç´Â ³»¸²Â÷¼ø Á¤·ÄµÈ Ä«µåµéÀÇ ¹è¿­</param>
-/// <returns>Ä«µåÀÇ ¼ıÀÚµéÀÌ ¿¬¼ÓÀûÀ¸·Î ¹è¿­µÇ¾î ÀÖ´ÂÁöÀÇ ¿©ºÎ</returns>
+/// <param name="cards">ìˆ«ì ìˆœì„œë¡œ ì˜¤ë¦„ì°¨ìˆœ ë˜ëŠ” ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬ëœ ì¹´ë“œë“¤ì˜ ë°°ì—´</param>
+/// <returns>ì¹´ë“œì˜ ìˆ«ìë“¤ì´ ì—°ì†ì ìœ¼ë¡œ ë°°ì—´ë˜ì–´ ìˆëŠ”ì§€ì˜ ì—¬ë¶€</returns>
 bool isContinuous(card* cards)
 {
 	int prev = -1;
@@ -128,37 +128,37 @@ int main(void)
 		printf("sortByNumber[%d] = %c %d\n", i, sortByNumber[i].color, sortByNumber[i].number);
 	// DEBUG PRINT REMOVE BEFORE SUBMIT
 
-	// 5Àå µ¿ÀÏ »ö»ó & ¿¬¼Ó ¼ıÀÚ
+	// 5ì¥ ë™ì¼ ìƒ‰ìƒ & ì—°ì† ìˆ«ì
 	if (sortByColor[0].color == sortByColor[4].color && continuous)
 	{
 		score = max(sortByNumber[0].number + 900, score);
 	}
 
-	// 4Àå µ¿ÀÏ ¼ıÀÚ
+	// 4ì¥ ë™ì¼ ìˆ«ì
 	if (dup[0].count == 4)
 		score = max(dup[0].value + 800, score);
 
-	// 3-2 ¼ıÀÚ µ¿ÀÏ
+	// 3-2 ìˆ«ì ë™ì¼
 	if (dup[0].count == 3 && dup[1].count == 2)
 		score = max(dup[0].value * 10 + dup[1].value + 700, score);
 
-	// 5Àå µ¿ÀÏ »ö»ó
+	// 5ì¥ ë™ì¼ ìƒ‰ìƒ
 	if (sortByColor[0].color == sortByColor[4].color)
 		score = max(sortByNumber[0].number + 600, score);
 
-	// ¿¬¼Ó ¼ıÀÚ
+	// ì—°ì† ìˆ«ì
 	if (continuous)
 		score = max(sortByNumber[0].number + 500, score);
 
-	// 3Àå ¼ıÀÚ µ¿ÀÏ
+	// 3ì¥ ìˆ«ì ë™ì¼
 	if (dup[0].count == 3)
 		score = max(dup[0].value + 400, score);
 
-	// 2-2 ¼ıÀÚ µ¿ÀÏ
+	// 2-2 ìˆ«ì ë™ì¼
 	if (dup[0].count == 2 && dup[1].count == 2)
 		score = max(max(dup[0].value, dup[1].value) * 10 + min(dup[0].value, dup[1].value) + 300, score);
 
-	// 2Àå ¼ıÀÚ µ¿ÀÏ
+	// 2ì¥ ìˆ«ì ë™ì¼
 	if (dup[0].count == 2)
 		score = max(dup[0].value + 200, score);
 

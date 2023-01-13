@@ -1,4 +1,4 @@
-/* �߱�(߾) 30. Worm Turns */
+/* 중급(上) 30. Worm Turns */
 
 #define _CRT_SECURE_NO_WARNINGS
 

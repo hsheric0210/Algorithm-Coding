@@ -1,4 +1,4 @@
-/* Áß±Þ(ß¾) 13. toilet */
+/* ì¤‘ê¸‰(ä¸Š) 13. toilet */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -19,10 +19,10 @@ int main(void)
 	if (n % 3 == 0)
 		minCount = n / 3;
 	else
-		// Âü°í: (Àû¾îµµ C¿¡¼­´Â) ½Ç¼öÇü -> Á¤¼öÇü º¯È¯ ½Ã '¼Ò¼öÁ¡ ¾Æ·¡°¡ »ç¶óÁø´Ù.' Áï, "³»¸²(floor)"µÈ´Ù.
+		// ì°¸ê³ : (ì ì–´ë„ Cì—ì„œëŠ”) ì‹¤ìˆ˜í˜• -> ì •ìˆ˜í˜• ë³€í™˜ ì‹œ 'ì†Œìˆ˜ì  ì•„ëž˜ê°€ ì‚¬ë¼ì§„ë‹¤.' ì¦‰, "ë‚´ë¦¼(floor)"ëœë‹¤.
 
-		// ÀÌ´Â Á¤¼ö³¢¸®ÀÇ ³ª´°¼À¿¡¼­µµ ¸¶Âù°¡ÁöÀÌ´Ù. ±âº»ÀûÀ¸·Î Á¤¼ö³¢¸®ÀÇ ³ª´°¼À¿¡¼­ ¸òÀÌ ½Ç¼ö°¡ ³ª¿Ã °æ¿ì, "³»¸²(floor)"µÇ¾î '¸ò°ú ³ª¸ÓÁö'¿¬»êÀ» ÇÑ °Í¿¡¼­ '¸ò'¸¸À» ±¸ÇÑ °Í°ú °°Àº °á°ú°¡ ³ª¿Â´Ù.
-		// Áï, 'a / b' = 'div(a, b).quot'
+		// ì´ëŠ” ì •ìˆ˜ë¼ë¦¬ì˜ ë‚˜ëˆ—ì…ˆì—ì„œë„ ë§ˆì°¬ê°€ì§€ì´ë‹¤. ê¸°ë³¸ì ìœ¼ë¡œ ì •ìˆ˜ë¼ë¦¬ì˜ ë‚˜ëˆ—ì…ˆì—ì„œ ëª«ì´ ì‹¤ìˆ˜ê°€ ë‚˜ì˜¬ ê²½ìš°, "ë‚´ë¦¼(floor)"ë˜ì–´ 'ëª«ê³¼ ë‚˜ë¨¸ì§€'ì—°ì‚°ì„ í•œ ê²ƒì—ì„œ 'ëª«'ë§Œì„ êµ¬í•œ ê²ƒê³¼ ê°™ì€ ê²°ê³¼ê°€ ë‚˜ì˜¨ë‹¤.
+		// ì¦‰, 'a / b' = 'div(a, b).quot'
 		minCount = n / 3 + 1;
 	int maxCount;
 	if (n % 2 == 0)

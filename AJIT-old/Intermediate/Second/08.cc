@@ -1,4 +1,4 @@
-/* Áß±Ş(ß¾) 8. stringcompression (¹®ÀÚ¿­ ¾ĞÃà) */
+/* ì¤‘ê¸‰(ä¸Š) 8. stringcompression (ë¬¸ìì—´ ì••ì¶•) */
 
 #define _CRT_SECURE_NO_WARNINGS
 

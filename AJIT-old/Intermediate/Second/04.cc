@@ -1,6 +1,6 @@
-/* Áß±Þ(ß¾) 4. Ä¡Å²¸Ô°í½Í´Ù */
-/* Á¡¼ö: 10 */
-/* µµ¿ò ÇÊ¿ä: O */
+/* ì¤‘ê¸‰(ä¸Š) 4. ì¹˜í‚¨ë¨¹ê³ ì‹¶ë‹¤ */
+/* ì ìˆ˜: 10 */
+/* ë„ì›€ í•„ìš”: O */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -17,7 +17,7 @@ int main(void)
 
 	for (i = 0; i < caseCount; i++)
 	{
-		// ¼ø¼­´ë·Î 0-P, 1-M, 2-F, 3-C
+		// ìˆœì„œëŒ€ë¡œ 0-P, 1-M, 2-F, 3-C
 		int data[8] = { 1 };
 		for (j = 0; j < 4; j++)
 			fscanf(in, "%d", data + j);
@@ -25,28 +25,28 @@ int main(void)
 
 		printf("^Simulation started\n");
 
-		// ¸ò: ÁÖ¹®ÇÒ ¼ö ÀÖ´Â Ä¡Å²ÀÇ °¹¼ö, ³ª¸ÓÁö: ³²Àº µ·
+		// ëª«: ì£¼ë¬¸í•  ìˆ˜ ìžˆëŠ” ì¹˜í‚¨ì˜ ê°¯ìˆ˜, ë‚˜ë¨¸ì§€: ë‚¨ì€ ëˆ
 		div_t chickenOrderCount = div(data[1], data[0]);
 		printf("Ordered chicken count: %d (Remaining money %d)\n", chickenOrderCount.quot, chickenOrderCount.rem);
 
-		// Ä¡Å²À» ÁÖ¹®ÇÏ°í ¹ÞÀº ÄíÆùÀÇ °¹¼ö
+		// ì¹˜í‚¨ì„ ì£¼ë¬¸í•˜ê³  ë°›ì€ ì¿ í°ì˜ ê°¯ìˆ˜
 		int receivedCouponCount = chickenOrderCount.quot * data[3];
 		printf("Received coupon count: %d\n", receivedCouponCount);
 
-		// ¸ò: ¹ÞÀº ÄíÆù Áß ¹«·á Ä¡Å²À» ÁÖ¹®ÇÏ´Â µ¥ »ç¿ëÇÑ ÄíÆùÀÇ °¹¼ö, ³ª¸ÓÁö: ±×·¯°í ³²Àº ÄíÆùÀÇ °¹¼ö
+		// ëª«: ë°›ì€ ì¿ í° ì¤‘ ë¬´ë£Œ ì¹˜í‚¨ì„ ì£¼ë¬¸í•˜ëŠ” ë° ì‚¬ìš©í•œ ì¿ í°ì˜ ê°¯ìˆ˜, ë‚˜ë¨¸ì§€: ê·¸ëŸ¬ê³  ë‚¨ì€ ì¿ í°ì˜ ê°¯ìˆ˜
 		//div_t couponUse = div(receivedCouponCount, data[2]);
 		//printf("Received free chicken count: %d (Remaining coupon %d)\n", couponUse.quot, couponUse.rem);
 
-		// ³²Àº ÄíÆù °¹¼ö
+		// ë‚¨ì€ ì¿ í° ê°¯ìˆ˜
 		// int remainCouponCount = couponUse.rem;
 
-		// --- µÎ »ç¶÷°£ÀÇ Â÷ÀÌ°¡ »ý±â´Â ºÎºÐ ---
+		// --- ë‘ ì‚¬ëžŒê°„ì˜ ì°¨ì´ê°€ ìƒê¸°ëŠ” ë¶€ë¶„ ---
 		// printf("--- DIFF POINT ---\n");
 
-		// ÄíÆùÀ¸·Î ½ÃÅ² Ä¡Å²°ú ÇÔ²² ¹ÞÀº ÄíÆùÀ¸·Î ½ÃÅ² Ä¡Å² °¹¼ö
+		// ì¿ í°ìœ¼ë¡œ ì‹œí‚¨ ì¹˜í‚¨ê³¼ í•¨ê»˜ ë°›ì€ ì¿ í°ìœ¼ë¡œ ì‹œí‚¨ ì¹˜í‚¨ ê°¯ìˆ˜
 		// int moreChickenCount = 0;
 
-		// ÄíÆùÀ¸·Î ÁÖ¹®ÇÑ Ä¡Å²°ú ÇÔ²² ¹ÞÀº ÄíÆù °¹¼ö Ãß°¡
+		// ì¿ í°ìœ¼ë¡œ ì£¼ë¬¸í•œ ì¹˜í‚¨ê³¼ í•¨ê»˜ ë°›ì€ ì¿ í° ê°¯ìˆ˜ ì¶”ê°€
 		// remainCouponCount += couponUse.quot * data[3];
 
 		int couponDelta = data[2] - data[3];
@@ -63,7 +63,7 @@ int main(void)
 		//int loopCount = 0;
 		//do
 		//{
-		//	// ¸ò: ¹«·á·Î Ä¡Å²À» ÁÖ¹®ÇÏ°í ¹ÞÀº ÄíÆùÀ» ÅëÇØ (´Ù½Ã) ÁÖ¹®ÇÑ Ä¡Å²ÀÇ °¹¼ö, ³ª¸ÓÁö: ±×·¯°í ³²Àº ÄíÆùÀÇ °¹¼ö
+		//	// ëª«: ë¬´ë£Œë¡œ ì¹˜í‚¨ì„ ì£¼ë¬¸í•˜ê³  ë°›ì€ ì¿ í°ì„ í†µí•´ (ë‹¤ì‹œ) ì£¼ë¬¸í•œ ì¹˜í‚¨ì˜ ê°¯ìˆ˜, ë‚˜ë¨¸ì§€: ê·¸ëŸ¬ê³  ë‚¨ì€ ì¿ í°ì˜ ê°¯ìˆ˜
 		//	div_t couponReuse = div(remainCouponCount, data[2]);
 		//	moreChickenCount += couponReuse.quot;
 		//	remainCouponCount = couponReuse.rem;
@@ -74,9 +74,9 @@ int main(void)
 
 		printf("$Simulation finished\n");
 
-		// µÎ »ç¶÷ÀÌ ¸ÔÀ» ¼ö ÀÖ´Â Ä¡Å² °¹¼öÀÇ Â÷
-		// = '¹«·á·Î Ä¡Å²À» ÁÖ¹®ÇÏ°í ¹ÞÀº ÄíÆù'À» ÅëÇØ¼­ ÁÖ¹®ÇÒ ¼ö ÀÖ´Â Ä¡Å²ÀÇ °¹¼ö
-		// (ÇÑ »ç¶÷Àº ´Ü°ñÀÌ¶ó ÄíÆùÀ» ÅëÇØ ¹«·á·Î Ä¡Å²À» ÁÖ¹®ÇÏ´õ¶óµµ ÇØ´ç ÁÖ¹®À» ÅëÇØ ÄíÆùÀ» ¹ÞÀ» ¼ö ÀÖÁö¸¸, ³ª¸ÓÁö ÇÑ »ç¶÷Àº ±×·¯Áö ¸øÇÑ´Ù. Â÷ÀÌ´Â ¿©±â¼­ ¹ß»ýÇÑ´Ù.)
+		// ë‘ ì‚¬ëžŒì´ ë¨¹ì„ ìˆ˜ ìžˆëŠ” ì¹˜í‚¨ ê°¯ìˆ˜ì˜ ì°¨
+		// = 'ë¬´ë£Œë¡œ ì¹˜í‚¨ì„ ì£¼ë¬¸í•˜ê³  ë°›ì€ ì¿ í°'ì„ í†µí•´ì„œ ì£¼ë¬¸í•  ìˆ˜ ìžˆëŠ” ì¹˜í‚¨ì˜ ê°¯ìˆ˜
+		// (í•œ ì‚¬ëžŒì€ ë‹¨ê³¨ì´ë¼ ì¿ í°ì„ í†µí•´ ë¬´ë£Œë¡œ ì¹˜í‚¨ì„ ì£¼ë¬¸í•˜ë”ë¼ë„ í•´ë‹¹ ì£¼ë¬¸ì„ í†µí•´ ì¿ í°ì„ ë°›ì„ ìˆ˜ ìžˆì§€ë§Œ, ë‚˜ë¨¸ì§€ í•œ ì‚¬ëžŒì€ ê·¸ëŸ¬ì§€ ëª»í•œë‹¤. ì°¨ì´ëŠ” ì—¬ê¸°ì„œ ë°œìƒí•œë‹¤.)
 		fprintf(out, "%d\n", delta);
 	}
 

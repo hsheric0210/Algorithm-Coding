@@ -1,4 +1,4 @@
-/* �߱�(߾) 32. ���ڿ����� */
+/* 중급(上) 32. 문자열제거 */
 
 #define _CRT_SECURE_NO_WARNINGS
 

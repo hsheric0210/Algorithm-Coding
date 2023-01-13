@@ -1,4 +1,4 @@
-/* ±âÃÊ ¾Ë°í¸®Áò(Å½»ö°ú Á¤·Ä) - 5. ÈüÁ¤·ÄÀÇ±¸Çö */
+/* ê¸°ì´ˆ ì•Œê³ ë¦¬ì¦˜(íƒìƒ‰ê³¼ ì •ë ¬) - 5. í™ì •ë ¬ì˜êµ¬í˜„ */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -26,7 +26,7 @@ int main(void)
 
 	int n = 0;
 	fscanf(in, "%d", &n);
-	int* tree = (int*)calloc(n + 5, sizeof(int)); // ÆíÀÇ¸¦ À§ÇØ ¹è¿­ÀÇ 1ºÎÅÍ »ç¿ë
+	int* tree = (int*)calloc(n + 5, sizeof(int)); // í¸ì˜ë¥¼ ìœ„í•´ ë°°ì—´ì˜ 1ë¶€í„° ì‚¬ìš©
 	for (int i = 1; i <= n; i++)
 	{
 		fscanf(in, "%d", tree + i); // Insert element at the back of the tree

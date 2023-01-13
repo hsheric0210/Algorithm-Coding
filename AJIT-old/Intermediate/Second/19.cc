@@ -1,6 +1,6 @@
-/* Áß±Þ(ß¾) 19. encryption2 */
-/* Á¡¼ö: 90 */
-/* µµ¿ò ÇÊ¿ä: O */
+/* ì¤‘ê¸‰(ä¸Š) 19. encryption2 */
+/* ì ìˆ˜: 90 */
+/* ë„ì›€ í•„ìš”: O */
 
 #define _CRT_SECURE_NO_WARNINGS
 

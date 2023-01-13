@@ -1,4 +1,4 @@
-/* �߱�(߾) 37. Undercut */
+/* 중급(上) 37. Undercut */
 
 #define _CRT_SECURE_NO_WARNINGS
 

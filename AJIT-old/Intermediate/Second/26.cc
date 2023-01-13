@@ -1,4 +1,4 @@
-/* �߱�(߾) 26. �밢�������ι迭���Է� */
+/* 중급(上) 26. 대각선순으로배열값입력 */
 
 #define _CRT_SECURE_NO_WARNINGS
 

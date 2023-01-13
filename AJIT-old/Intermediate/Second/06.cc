@@ -1,4 +1,4 @@
-/* �߱�(߾) 6. ū���ǰ���2 */
+/* 중급(上) 6. 큰수의곱셈2 */
 
 #define _CRT_SECURE_NO_WARNINGS
 

@@ -1,4 +1,4 @@
-/* Áß±Þ(ß¾) 39. µ¶°¨ ¿¹¹æÁÖ»ç ¸Â±â */
+/* ì¤‘ê¸‰(ä¸Š) 39. ë…ê° ì˜ˆë°©ì£¼ì‚¬ ë§žê¸° */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -9,7 +9,7 @@
 
 void shift(int* arr, int length, int amount)
 {
-	// memcpy°¡ Á¦´ë·Î ÀÛµ¿ÇÏÁö ¾Ê¾Æ¼­ ±×³É Á÷Á¢ ±¸ÇöÇÔ
+	// memcpyê°€ ì œëŒ€ë¡œ ìž‘ë™í•˜ì§€ ì•Šì•„ì„œ ê·¸ëƒ¥ ì§ì ‘ êµ¬í˜„í•¨
 	int* copy = (int*)calloc(amount, sizeof(int));
 	for (int i = 0; i < amount; i++)
 		copy[i] = arr[i + length - amount - 1];

@@ -1,5 +1,5 @@
-/* ±âÃÊ ¾Ë°í¸®Áò(¼öÇÐ) - 6. ÁÖ»çÀ§ ½×±â */
-// À¯Çü: Greedy
+/* ê¸°ì´ˆ ì•Œê³ ë¦¬ì¦˜(ìˆ˜í•™) - 6. ì£¼ì‚¬ìœ„ ìŒ“ê¸° */
+// ìœ í˜•: Greedy
 
 #define _CRT_SECURE_NO_WARNINGS
 

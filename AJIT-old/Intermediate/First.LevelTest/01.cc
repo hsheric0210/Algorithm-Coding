@@ -1,4 +1,4 @@
-/* Áß±Þ(ù») ·¹º§Å×½ºÆ® 1. Financial Management */
+/* ì¤‘ê¸‰(ä¸‹) ë ˆë²¨í…ŒìŠ¤íŠ¸ 1. Financial Management */
 
 #define _CRT_SECURE_NO_WARNINGS
 

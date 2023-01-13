@@ -1,4 +1,4 @@
-/* ±âÃÊ ¾Ë°í¸®Áò(´ÙÀÌ³ª¹Í) - 2. Give me the coin */
+/* ê¸°ì´ˆ ì•Œê³ ë¦¬ì¦˜(ë‹¤ì´ë‚˜ë¯¹) - 2. Give me the coin */
 
 #define _CRT_SECURE_NO_WARNINGS
 

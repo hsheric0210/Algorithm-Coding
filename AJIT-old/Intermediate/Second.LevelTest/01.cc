@@ -1,4 +1,4 @@
-/* �߱�(߾) �����׽�Ʈ 1. �����Ǳ⳪����� */
+/* 중급(上) 레벨테스트 1. 개미의기나긴모험 */
 
 #define _CRT_SECURE_NO_WARNINGS
 

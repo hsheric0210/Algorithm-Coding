@@ -1,4 +1,4 @@
-/* �߱�(߾) 7. ū���ǻ��� */
+/* 중급(上) 7. 큰수의뺄셈 */
 
 #define _CRT_SECURE_NO_WARNINGS
 

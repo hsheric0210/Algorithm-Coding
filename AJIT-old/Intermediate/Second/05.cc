@@ -1,4 +1,4 @@
-/* Áß±Þ(ß¾) 5. ¼ÒÀÎ¼öºÐÇØ */
+/* ì¤‘ê¸‰(ä¸Š) 5. ì†Œì¸ìˆ˜ë¶„í•´ */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -10,7 +10,7 @@
 
 #define MAX_LEN 10000
 
-// HELP: ÇØ¼³ º¸°í Ç®À½. ±×·±µ¥ 90Á¡ ;
+// HELP: í•´ì„¤ ë³´ê³  í’€ìŒ. ê·¸ëŸ°ë° 90ì  ;
 
 int main(void)
 {

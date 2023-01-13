@@ -1,4 +1,4 @@
-/* ±âÃÊ ¾Ë°í¸®Áò(¼öÇĞ) - 7. ÀÌÁıÆ¼¾ÈºĞ¼ö */
+/* ê¸°ì´ˆ ì•Œê³ ë¦¬ì¦˜(ìˆ˜í•™) - 7. ì´ì§‘í‹°ì•ˆë¶„ìˆ˜ */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -62,7 +62,7 @@ int main(void)
 			printf("try: %d/%d\n", frac2.numerator, frac2.denominator);
 			fracs[nfracs++] = frac2;
 
-			// ÅëºĞÇÏ°í »©´Â °Í ±¸Çö
+			// í†µë¶„í•˜ê³  ë¹¼ëŠ” ê²ƒ êµ¬í˜„
 			int _lcm = lcm(frac.denominator, frac2.denominator);
 
 			printf("lcm=%d\n", _lcm);

@@ -1,4 +1,4 @@
-/* Áß±Ş(ß¾) 38. ±äÀÚ¸®¼öÀÇ°ö¼À */
+/* ì¤‘ê¸‰(ä¸Š) 38. ê¸´ìë¦¬ìˆ˜ì˜ê³±ì…ˆ */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -48,7 +48,7 @@ int main(void)
 	printf("[INPUT] first_length=%d\nsecond_length: %d\n", nfirst, nsecond);
 #endif
 
-	// ¼¼·Î¼À °è»êÀ» À§ÇÑ ¹è¿­
+	// ì„¸ë¡œì…ˆ ê³„ì‚°ì„ ìœ„í•œ ë°°ì—´
 	// TODO: optimize it
 	int** arr = (int**)calloc(nsecond, sizeof(int*));
 	if (arr != nullptr)
@@ -60,7 +60,7 @@ int main(void)
 		return 1;
 	}
 
-	// ¼¼·Î¼À ½ÇÇà
+	// ì„¸ë¡œì…ˆ ì‹¤í–‰
 	for (int i = 0; i < nsecond; i++)
 	{
 		int secondvalue = second[nsecond - i - 1] - '0';
@@ -107,7 +107,7 @@ int main(void)
 	}
 #endif
 
-	// ¼¼·Î¼À µ¡¼À °è»ê
+	// ì„¸ë¡œì…ˆ ë§ì…ˆ ê³„ì‚°
 
 	char* result = (char*)calloc(MAX_LENGTH * 2, sizeof(char));
 	_strset(result, 0);

@@ -1,4 +1,4 @@
-/* Áß±Ş(ß¾) 35. ¾ËÆÄºªÇÇ¶ó¹Ìµå */
+/* ì¤‘ê¸‰(ä¸Š) 35. ì•ŒíŒŒë²³í”¼ë¼ë¯¸ë“œ */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -20,7 +20,7 @@ int main(void)
 
 	if (ch < 'A' || ch > 'Z' || n < 0 || n > 24)
 	{
-		fprintf(out, "ÀÔ·Â¿¡·¯!");
+		fprintf(out, "ì…ë ¥ì—ëŸ¬!");
 		return 1;
 	}
 

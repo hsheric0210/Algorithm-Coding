@@ -1,4 +1,4 @@
-/* �߱�(߾) 2. ���İ���ձ��ϱ� */
+/* 중급(上) 2. 정렬과평균구하기 */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -10,7 +10,7 @@
 
 #define MAX_LEN 10000
 
-// HELP: �ؼ� ���� Ǯ��
+// HELP: 해설 보고 풀음
 
 int main(void)
 {

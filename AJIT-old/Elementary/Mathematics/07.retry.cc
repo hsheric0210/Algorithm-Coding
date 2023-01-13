@@ -1,4 +1,4 @@
-/* ±âÃÊ ¾Ë°í¸®Áò(¼öÇĞ) - 7. ÀÌÁıÆ¼¾ÈºĞ¼ö */
+/* ê¸°ì´ˆ ì•Œê³ ë¦¬ì¦˜(ìˆ˜í•™) - 7. ì´ì§‘í‹°ì•ˆë¶„ìˆ˜ */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -45,7 +45,7 @@ int guf(float frac)
 
 fraction subtract(fraction a, fraction b)
 {
-	// ÅëºĞÇÏ°í »©´Â °Í ±¸Çö
+	// í†µë¶„í•˜ê³  ë¹¼ëŠ” ê²ƒ êµ¬í˜„
 	int _lcm = lcm(a.denominator, b.denominator);
 	int firstMult = _lcm / a.denominator;
 	int secondMult = _lcm / b.denominator;

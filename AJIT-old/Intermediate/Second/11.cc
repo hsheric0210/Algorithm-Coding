@@ -1,4 +1,4 @@
-/* �߱�(߾) 11. findprime */
+/* 중급(上) 11. findprime */
 
 #define _CRT_SECURE_NO_WARNINGS
 

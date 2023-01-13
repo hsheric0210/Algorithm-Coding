@@ -1,4 +1,4 @@
-/* �߱�(߾) 2. ���İ���ձ��ϱ� */
+/* 중급(上) 2. 정렬과평균구하기 */
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>

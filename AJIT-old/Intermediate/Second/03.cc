@@ -1,4 +1,4 @@
-/* Áß±Ş(ß¾) 3. ¿î¼® */
+/* ì¤‘ê¸‰(ä¸Š) 3. ìš´ì„ */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -8,23 +8,23 @@
 int depthInternal(int scale, int centerStart, int centerEnd, int column, int row)
 {
 	int scaleEven = scale % 2 == 0, center = scaleEven ? scale / 2 : scale - 1 / 2;
-	if (column <= centerStart && row <= centerStart) // ÁÂ»ó´Ü
+	if (column <= centerStart && row <= centerStart) // ì¢Œìƒë‹¨
 		return min(row, column) + 1;
-	else if (column >= centerEnd && row <= centerEnd) // ¿ì»ó´Ü
+	else if (column >= centerEnd && row <= centerEnd) // ìš°ìƒë‹¨
 		return min(row + 1, scale - column);
-	else if (column <= centerStart && row >= centerEnd) // ÁÂÇÏ´Ü
+	else if (column <= centerStart && row >= centerEnd) // ì¢Œí•˜ë‹¨
 		return min(scale - row, column + 1);
-	else if (column >= centerEnd && row >= centerEnd) // ¿ìÇÏ´Ü
+	else if (column >= centerEnd && row >= centerEnd) // ìš°í•˜ë‹¨
 		return min(scale - row, scale - column);
 	return 0;
 }
 
 int depth(int scale, int column, int row)
 {
-	if (scale % 2 == 0) // ScaleÀÌ Â¦¼ö : Áß¾Ó°ªÀÌ 4°³
+	if (scale % 2 == 0) // Scaleì´ ì§ìˆ˜ : ì¤‘ì•™ê°’ì´ 4ê°œ
 		return depthInternal(scale, scale / 2 - 1, scale / 2, column, row);
 
-	// ScaleÀÌ È¦¼ö : Áß¾Ó°ªÀÌ 1°³
+	// Scaleì´ í™€ìˆ˜ : ì¤‘ì•™ê°’ì´ 1ê°œ
 	int center = (scale - 1) / 2;
 	return depthInternal(scale, center, center, column, row);
 }

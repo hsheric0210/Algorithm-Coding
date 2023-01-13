@@ -1,4 +1,4 @@
-/* Áß±Ş(ß¾) 27. ¹İ¿Ã¸² */
+/* ì¤‘ê¸‰(ä¸Š) 27. ë°˜ì˜¬ë¦¼ */
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -6,13 +6,13 @@
 #include <stdlib.h>
 #include <math.h>
 
-// API »ç¿ë, 90Á¡
+// API ì‚¬ìš©, 90ì 
 int roundAt(int input, int places)
 {
 	return (int)(rint((double)input / places) * places);
 }
 
-// Á÷Á¢ ±¸Çö, 100Á¡
+// ì§ì ‘ êµ¬í˜„, 100ì 
 int roundAt2(int input, int places)
 {
 	int mod = input % places;

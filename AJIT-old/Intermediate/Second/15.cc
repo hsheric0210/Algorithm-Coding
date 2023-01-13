@@ -1,4 +1,4 @@
-/* �߱�(߾) 15. ����Ű��Ʈ���� */
+/* 중급(上) 15. 매직키테트리스 */
 
 #define _CRT_SECURE_NO_WARNINGS
 

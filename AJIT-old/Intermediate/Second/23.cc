@@ -1,4 +1,4 @@
-/* �߱�(߾) 23. freq */
+/* 중급(上) 23. freq */
 
 #define _CRT_SECURE_NO_WARNINGS
 

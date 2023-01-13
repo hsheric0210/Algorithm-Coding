@@ -1,4 +1,4 @@
-/* �߱�(߾) �����׽�Ʈ 3. �����̾��ǹ��� */
+/* 중급(上) 레벨테스트 3. 달팽이안의문자 */
 
 #define _CRT_SECURE_NO_WARNINGS
 
