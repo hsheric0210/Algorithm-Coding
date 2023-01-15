@@ -268,7 +268,7 @@ def process_files(args):
             for line in fileinput.input():
                 orig_source_code += line
         else:
-            with open(filename, 'r') as f:
+            with open(filename, 'r', encoding='utf-8') as f:
                 orig_source_code = f.read()
                 newline = f.newlines
 
