@@ -1,55 +1,74 @@
-#pragma warning(disable:4996)
-#include<cstdio>
-#include<cstdlib>
+/*
+풍선_ajit
+https://43.200.211.173/contest/18/problem/80029
+*/
+#include<iostream>
 #include<algorithm>
-using namespace std;
-typedef struct A { int input, number; }A;
-bool cmp(const A& x, const A& y) {
-	if (x.input < y.input) return true;
-	else if (x.input == y.input && x.number < y.number) return true;
-	else return false;
+#include<vector>
+typedef struct A {
+	int input, index;
+};
+int acmp(A a, A b)
+{
+	if (a.input < b.input) return true;
+	return a.input == b.input && a.index < b.index;
 }
+using namespace std;
+int main()
+{
+	int n, m;
+	cin >> n >> m;
 
-int main() {
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-	int i, j, k, l, m, n, x, y, z, sum = 0, cnt = 0;
-	scanf("%d %d", &m, &n);
-	int* G = (int*)malloc((m + 1) * sizeof(int));
-	A* B = (A*)malloc((m + 1) * sizeof(A));
-	for (i = 1; i <= m; i++) {
-		scanf("%d", &G[i]);
-		sum += G[i];
-		B[i].input = G[i];
-		B[i].number = i;
+	int *arr = new int[n + 1]{ 0 };
+	A* a_arr = new A[n + 1];
+
+	int sum = 0;
+	for (int i = 1; i <= n; i++)
+	{
+		cin >> arr[i]; sum += arr[i];
+		a_arr[i].input = arr[i]; a_arr[i].index = i;
 	}
-	if (sum <= n) {
-		for (i = 1; i <= m; i++) printf("%d ", G[i]);
+
+	if (m >= sum) // 요구한 합계가 그 어떠한 방법으로도 도달할 수 없는 경우
+	{
+		// 전체를 입력받은 순서 그대로 출력하고 종료
+		for (int i = 1; i <= n; i++)
+			cout << arr[i] << ' ';
+		cout << endl;
 		return 0;
 	}
-	sort(B + 1, B + m + 1, cmp);
-	x = 0;
-	for (i = 1; i <= m; i = j) {
-		l = m - i + 1;
-		k = B[i].input - x;
-		if (n - (l * k) >= 0) {
-			n -= (l * k);
-			x = B[i].input;
+
+	sort(a_arr + 1, a_arr + n + 1, acmp);
+	
+	int height = 0, remaining_element_count, next_loop_index; // height
+	for (int i = 1; i <= n; i = next_loop_index) // SKILL: Dynamic loop index incremental (j)
+	{
+		remaining_element_count = n - i + 1; // 
+		int height_delta = a_arr[i].input - height; // 높이 차이
+		int new_m = m - height_delta * remaining_element_count; // 새로운 합계
+		if (new_m >= 0) // check if the total count doesn't overflow
+		{
+			m = new_m;
+			height = a_arr[i].input;
 		}
-		else break;
-		for (j = i + 1; j <= m; j++) {
-			if (B[i].input < B[j].input) break;
-		}
+		else break; // 이미 최대 
+
+		// SKILL: Dynamic loop index incremental (j)
+		// 다음 높이 변화가 일어나는 index를 구하여 j에 저장한다
+		for (next_loop_index = i + 1; next_loop_index <= n; next_loop_index++)
+			if (a_arr[i].input < a_arr[next_loop_index].input)
+				break;
 	}
-	y = n / l;
-	z = n % l;
-	for (i = 1; i <= m; i++) {
-		if (G[i] <= x) printf("%d ", G[i]);
+
+	int j = m / remaining_element_count;
+	int k = m % remaining_element_count;
+	int count = 0;
+	for (int i = 1; i <= n; i++) {
+		if (arr[i] <= height) printf("%d ", arr[i]);
 		else {
-			cnt++;
-			if (cnt <= z) printf("%d ", x + y + 1);
-			else printf("%d ", x + y);
+			count++;
+			if (count <= k) printf("%d ", height + j + 1);
+			else printf("%d ", height + j);
 		}
 	}
-	return 0;
 }
