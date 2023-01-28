@@ -3,100 +3,29 @@
 https://43.200.211.173/contest/18/problem/80030
 */
 #include<iostream>
-#include<algorithm>
-#include<vector>
 #include<cmath>
+#include<vector>
 using namespace std;
-typedef struct _A
+int i, j, k, l, m, n, o, p, q;
+vector<int>* v;
+int isprime(int num)
 {
-	int sum;
-	int lastnumber;
-} A;
-int i, j, k, n;
-int isprime(int n)
-{
-	if (n <= 1)
-		return 0;
-	for (i = 2; i < (int)ceil(sqrt(n)); i++)
-		if (n % i == 0)
-			return 0;
-	return 1;
+	for (p = 2; p < num; p++)
+		if (num % p == 0)
+			return false;
+	return true;
 }
-void primes(int begin, int end, vector<int>* f)
+int push_primes(int until, vector<int>* vec)
 {
-	for (i = begin; i < end; i++)
+	for (i = 2; i < until; i++)
 	{
-		int prime = 1;
-		for (j = 2; j < (int)ceil(sqrt(i)); j++)
-			if (i % j == 0)
-				prime = 0;
-		if (prime) f->push_back(i);
+		if (isprime(i))
+			vec->push_back(i);
 	}
 }
 int main()
 {
 	cin >> n >> k;
-
-	if (k <= 1)
-	{
-		cout << isprime(n) << endl;
-		return 0;
-	}
-	vector<int>plist;
-	primes(2, n, &plist);
-
-	int count = 0;
-	vector<vector<A>> t;
-	for (i = 0; i < k; i++)
-	{
-		if (i == 0)
-		{
-			vector<A> init;
-			for (auto a = plist.begin(); a != plist.end(); a++)
-			{
-				A tup = { *a, *a };
-				init.push_back(tup);
-			}
-			t.push_back(init);
-		}
-		else
-		{
-			vector<A> prev = t[i - 1];
-			vector<A> init;
-			cout << "t[" << i << "].size=" << prev.size() << endl;
-			for (auto a = prev.begin(); a != prev.end(); a++)
-			{
-				for (j = 0; j < plist.size(); j++)
-				{
-					if (plist[j] > a->lastnumber)
-						break;
-				}
-				for (/*j = j*/; j < plist.size(); j++)
-				{
-					int b = plist[j];
-					//if (b <= a->lastnumber) continue;
-					int sum = a->sum + b;
-					if (sum > n) break;
-					init.push_back({ sum, b });
-					if (i == k - 1 && sum == n)
-						count++;
-				}
-			}
-			t.push_back(init);
-		}
-	}
-
-	cout << count << endl;
-
-	// PRINT
-	//for (i = 0; i < t.size(); i++)
-	//{
-	//	cout << "t[" << i << "]" << endl;
-	//	for (auto a = t[i].begin(); a != t[i].end(); a++)
-	//	{
-	//		cout << "(" << a->sum << "-" << a->lastnumber << ")";
-	//	}
-	//	cout << endl;
-	//}
-	// PRINT
+	v = new vector<int>[k];
+	push_primes(n, &v[0]);
 }
