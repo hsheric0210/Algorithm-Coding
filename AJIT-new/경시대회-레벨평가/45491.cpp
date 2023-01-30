@@ -5,14 +5,10 @@ https://43.200.211.173/contest/19/problem/45491
 #include<iostream>
 #include<set>
 using namespace std;
-typedef struct _A
-{
-	int offset, length;
-} A;
 #define ASET set<A, decltype(acmp)*>
 bool acmp(A a, A b) { return a.length < b.length; }
 int i, j, k, l, m, n, o, p, q, * arr;
-ASET* dp;
+int **
 int main()
 {
 	cin >> l >> n;
@@ -36,7 +32,7 @@ int main()
 			for (j = 0; j + i - 1 < l; j++)
 			{
 				// access previous
-
+				
 			}
 		}
 		dp[i] = cur;
