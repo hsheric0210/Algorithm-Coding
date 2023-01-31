@@ -3,38 +3,51 @@
 https://43.200.211.173/contest/19/problem/45491
 */
 #include<iostream>
+#include<algorithm>
 #include<set>
+#include<vector>
 using namespace std;
-#define ASET set<A, decltype(acmp)*>
-bool acmp(A a, A b) { return a.length < b.length; }
-int i, j, k, l, m, n, o, p, q, * arr;
-int **
+int i, j, k, l, m, n, o, p, q, * arr, ** dp;
+vector<int> tmp;
 int main()
 {
+	// init
 	cin >> l >> n;
-	arr = new int[n];
-	for (i = 0; i < n; i++)
+	n += 2;
+	arr = new int[n] { 0 };
+	arr[n - 1] = l;
+	dp = new int* [n];
+	for (i = 0; i <= n; i++)
+		dp[i] = new int[n] { 0 };
+
+	//input
+	for (i = 1; i < n - 1; i++)
 		cin >> arr[i];
-	dp = new ASET[l];
-	for (i = 2; i <= l; i++) // l = piece_length
+
+	//dp
+	for (k = 2; k <= n; k++) // gap
+		for (i = 0; i < n; i++) // vert
+			for (j = k; j < n; j++) // hori
+				if (j - i == k) // only fill specified gaps
+				{
+					int m = 999;
+					tmp.clear();
+					for (l = 1; l < k; l++)
+						tmp.push_back(dp[0][l] + dp[l][k]);
+					m = *min_element(tmp.begin(), tmp.end());
+					dp[i][j] = (arr[j] - arr[j - k]) + m;
+				}
+
+	//debug build dp-t
+	for (i = 0; i < n; i++)
 	{
-		ASET prev = dp[i - 1];
-		ASET cur;
-		if (i == 2)
+		for (j = 0; j < n; j++)
 		{
-			// 2-block init
-			for (j = 0; j + i - 1 < l; j++)
-				cur.insert({ j, i });
+			cout << dp[i][j] << ' ';
 		}
-		else
-		{
-			// 3~n blocks
-			for (j = 0; j + i - 1 < l; j++)
-			{
-				// access previous
-				
-			}
-		}
-		dp[i] = cur;
+		cout << endl;
 	}
+	//debug
+
+	cout << dp[0][n - 1] << endl;
 }
