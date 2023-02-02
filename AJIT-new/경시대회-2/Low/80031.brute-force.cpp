@@ -39,7 +39,7 @@ int main()
 
 		if (actual == n)
 		{
-			//cout << prev_sign << " " << pivot << " (a=" << actual << ')' << endl;
+			cout << prev_sign << " " << pivot << " (a=" << actual << ')' << endl;
 			pivot += prev_sign;
 		}
 		else if (prev == n && actual < n) // to output maximum possible pivot
@@ -50,13 +50,13 @@ int main()
 		if (actual < n)
 		{
 			pivot--;
-			//cout << "-- " << pivot << " (a=" << actual << ')' << endl;
+			cout << "-- " << pivot << " (a=" << actual << ')' << endl;
 			prev_sign = -1;
 		}
 		else if (actual > n)
 		{
 			pivot++;
-			//cout << "++ " << pivot << " (a=" << actual << ')' << endl;
+			cout << "++ " << pivot << " (a=" << actual << ')' << endl;
 			prev_sign = 1;
 		}
 		prev = actual;

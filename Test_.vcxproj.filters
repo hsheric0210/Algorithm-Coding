@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AJIT-new\경시대회-레벨평가\45491.cpp">
+    <ClCompile Include="Common Algorithms\LIS\LIS_Length_and_Content.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
