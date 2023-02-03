@@ -20,7 +20,7 @@ int main()
 		cin >> arr[i];
 	for (i = 0; i < n; i++)
 	{
-		pair<int, int> k = { 0,0 };
+		pair<int, int> k = { 0,-1 };
 		for (j = 0; j < i; j++)
 			if (arr[j] < arr[i] && dp[j].first > k.first)
 				k = { dp[j].first, j };
@@ -29,19 +29,25 @@ int main()
 	//backtrack
 	deque<pair<int, int>>q;
 	deque<int>lis;
-	auto mx = *max_element(dp, dp + n, [](auto a, auto b) {return a.first < b.first; });
-	cout << mx.first << endl;
-	q.push_back(mx);
-	while (!q.empty())
+	auto mx = max_element(dp, dp + n, [](auto a, auto b) {return a.first < b.first; });
+	cout << mx->first << endl; // print lis_length
+
+	lis.push_front(arr[mx - dp]);
+	if (mx->second > 0)
 	{
-		auto top = q.back();
-		q.pop_back();
-		if (top.second <= 0)
-			break;
-		lis.push_front(arr[top.second]);
-		q.push_back(dp[top.second]);
+		q.push_back(*mx);
+		while (!q.empty())
+		{
+			auto top = q.back();
+			q.pop_back();
+			lis.push_front(arr[top.second]);
+			q.push_back(dp[top.second]);
+			if (top.second <= 0)
+				break;
+		}
 	}
-	for (auto a = lis.begin(); a != lis.end(); a++)
-		cout << *a << ' ';
+		for (auto a = lis.begin(); a != lis.end(); a++)
+			cout << *a << ' ';
+
 	cout << endl;
 }
