@@ -1,6 +1,7 @@
 /*
 쇼핑몰-정올2019
 https://43.200.211.173/contest/17/problem/17506
+소요시간: 약 3시간 반
 */
 #include<iostream>
 #include<algorithm>
