@@ -3,43 +3,34 @@
 https://43.200.211.173/contest/17/problem/80175
 */
 #include<iostream>
-#include<numeric>
-#include<queue>
 #include<algorithm>
+#include<vector>
 using namespace std;
-int i, j, k, l, m, n, o, p, q, r;
-int arr[310];
 typedef struct _A
 {
-	int begin, end;
+	int a, b, l;
 	double avg;
 } A;
-bool c(A a, A b) {
-	return a.avg > b.avg // 평균합 더 큰 것
-		|| a.avg == b.avg && (a.end - a.begin) > (b.end - b.begin) // 길이 더 긴 것
-		|| a.avg == b.avg && (a.end - a.begin) == (b.end - b.begin) && a.begin < b.begin; // 더 일찍 있는 것
-}
-vector<A>v;
+vector<int>a;
+vector<A>b;
+bool c(A a, A b) { return a.avg > b.avg || a.avg == b.avg && a.l > b.l || a.avg == b.avg && a.l == b.l && a.a < b.a; }
+int i, j, k, l, n, m, p, q, r;
 int main()
 {
 	cin >> n >> m >> k;
+
+	a.push_back(0); // prevent index-oob when reading a[i-1]
 	for (i = 1; i <= n; i++)
-		cin >> arr[i];
-	for (i = 1; i < n; i++)
 	{
-		for (j = i + 1; j <= n; j++)
+		cin >> j;
+		a.push_back(a[i - 1] + j); // build sum tree
+	}
+	for (i = 1; i <= n - (k - 1); i++)
+		for (j = i + (k - 1); j <= n; j++)
 		{
-			if (j - i >= k - 1)
-			{
-				//cout << "push of i=" << i << ", j=" << j << endl;
-				v.push_back({ i,j, (double)accumulate(arr + i, arr + j + 1, 0) / (j - i + 1) });
-			}
+			b.push_back({ i, j, j - i + 1, (double)(a[j] - a[i - 1]) / (j - i + 1) });
 		}
-	}
-	sort(v.begin(), v.end(), c);
-	for (i = 0; i < min(m, (int)v.size()); i++)
-	{
-		auto tp = v[i];
-		cout << tp.begin << ' ' << tp.end << endl;// << " ttl=" << tp.avg << " len=" << (tp.end - tp.begin) << endl;
-	}
+	sort(b.begin(), b.end(), c);
+	for (i = 0; i < min((int)b.size(), m); i++)
+		cout << b[i].a << ' ' << b[i].b << endl;
 }
