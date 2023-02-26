@@ -24,6 +24,7 @@ int main()
 	{
 		cin >> j;
 		a.push_back(a[i - 1] + j); // build sum tree
+		// a[i] = i번째 입력까지의 총합
 	}
 	for (i = 1; i <= n - (k - 1); i++)
 		for (j = i + (k - 1); j <= n; j++)
