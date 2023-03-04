@@ -7,7 +7,7 @@ https://43.200.211.173/contest/17/problem/17507
 #include<algorithm>
 #include<vector>
 using namespace std;
-int i, j, k, l, m, n, o, p, q, r, s, t, u, testCases, w, x, y, z;
+int i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
 int a[32], b[32], c[32];
 void build()
 {
@@ -70,10 +70,10 @@ int main()
 			w = 0;
 			for (u = m; u <= y; u++)
 			{
-				testCases = brute_force(u, 0);
-				cout << "#2 j(" << u << ")=" << testCases << endl;
-				if (testCases > w)
-					w = testCases;
+				v = brute_force(u, 0);
+				cout << "#2 j(" << u << ")=" << v << endl;
+				if (v > w)
+					w = v;
 			}
 			if (l != w)
 			{
