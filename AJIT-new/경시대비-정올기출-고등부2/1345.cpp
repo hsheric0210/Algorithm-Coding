@@ -1,49 +1,40 @@
 /*
 햄버거 분배
-https://43.200.211.173/contest/17/problem/1345
+http://ajit.co.kr/contest/28/problem/25038
 */
 #include<iostream>
 #include<algorithm>
 using namespace std;
-int i, j, k, l, m, n, o, p, q, r, s, t, u, v;
-char str[20005];
-int chosen[20005];
+int i, j, k, l, m, n, x,y;
+char a[20005], b, c, d;
 int main()
 {
-	cin >> n >> k;
-	cin >> str;
-
+	cin >> n >> k >> a;
 	for (i = 0; i < n; i++)
 	{
-		if (str[i] == 'H') // HaMbUrGuR
+	reloop:
+		l = 1;
+		b = a[i];
+		if (b == 0) // if current entry is empty, skip
+			continue;
+		c = b == 'H' ? 'P' : 'H';
+		for (j = max(i - k, 0); j <= i + k; j++)
 		{
-			for (j = min(i + k, 20000); j >= i + 1; j--)
+			if (j == i) continue; // skip myself
+			if (a[j] != 0)
+				l = 0;
+			if (a[j] == c)
 			{
-				if (str[j] == 'P')
-				{
-					chosen[j] = 1;
-					l++;
-					break;
-				}
+				m++;
+				a[i] = a[j] = 0;
+				i = (j == i + 1) ? i + 2 : i + 1;
+				goto reloop;
 			}
 		}
-	}
-
-	for (i = 0; i < n; i++)
-	{
-		if (str[i] == 'H') // HaMbUrGuR
+		if (l)
 		{
-			for (j = max(i - k, 0); j <= i - 1; j++)
-			{
-				if (str[j] == 'P')
-				{
-					chosen[j] = 1;
-					m++;
-					break;
-				}
-			}
+			break;
 		}
 	}
-	cout << "l=" << l << ", m=" << m << endl;
-	cout << max(l, m) << endl;
+	cout << m << endl;
 }

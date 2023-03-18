@@ -1,6 +1,6 @@
 /*
 점프(정올2019)
-https://43.200.211.173/contest/17/problem/17507
+http://ajit.co.kr/contest/28/problem/17507
 */
 #include<iostream>
 #include<cmath>
