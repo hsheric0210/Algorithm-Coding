@@ -3,49 +3,36 @@ ABBC-정올2022
 http://ajit.co.kr/contest/28/problem/25038
 */
 #include<iostream>
-#include<algorithm>
 #include<cstring>
 #include<deque>
 using namespace std;
-int i, j, k, l;
-deque<char>s;
-char _s[300005];
+char s[300005];
+deque<int>q[3];
+int i, j, k;
 int main()
 {
-	cin >> _s;
-	l = strlen(_s);
-	s.push_back(0); // push empty char to prevent first pointer(a.begin) from being invalidated
-	for (i = 0; i < l; i++)
-		s.push_back(_s[i]); // manual copy to linked list
-
-	for (auto a = s.begin() + 1; a != s.end(); a++)
+	cin >> s;
+	for (i = 0, j = strlen(s); i < j; i++)
+		q[s[i] - 'A'].push_back(i);
+	while (!q[1].empty() && !q[2].empty()) // BC
 	{
-		if (*(a - 1) == 'A' && *a == 'B' && *(a + 1) == 'C') // ABC
+		if (q[1].front() < q[2].front())
 		{
 			k++;
-			if (*(a + 2) == 'B') // ab -> better
-			{
-				s.erase(a - 1, a);
-				continue;
-			}
-
-			if (i > 2 && *(a - 2) == 'B') // bc -> better
-			{
-				s.erase(a, a + 1);
-				a++; // prevent accessing to deleted 'a+1'
-				continue;
-			}
+			q[1].pop_front();
 		}
-		if (*(a - 1) == 'A' && *a == 'B') // ab
-		{
-			s.erase(a - 1, a);
-			k++;
-		}
-		if (*(a - 1) == 'B' && *a == 'C') // bc
-		{
-			s.erase(a - 1, a);
-			k++;
-		}
+		q[2].pop_front();
 	}
-	cout << k << endl;
+
+	while (!q[0].empty() && !q[1].empty()) // AB
+	{
+		if (q[0].front() < q[1].front())
+		{
+			k++;
+			q[0].pop_front();
+		}
+		q[1].pop_front();
+	}
+
+	cout << k << '\n';
 }
