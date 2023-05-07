@@ -2,7 +2,7 @@
 using namespace std;
 typedef unsigned long long ll;
 int i,j,k,l;
-ll gcd, lcm, x, y, z;
+ll _gcd, _lcm, x, y, z;
 ll getGCD(ll a, ll b)
 {
 	ll alpha=0, beta=a, gamma=b;
@@ -18,17 +18,17 @@ ll getGCD(ll a, ll b)
 }
 int main()
 {
-	cin >> gcd >> lcm;
-	x = gcd * lcm;
+	cin >> _gcd >> _lcm;
+	x = _gcd * _lcm;
 	y = sqrtl(x);
 	for (z = y; z > 0; z--)
 	{
 		ll mod = x % z;
 		if (mod == 0)
 		{
-			ll gcd2 = getGCD(z, x / z);
-			//cout << "x mod z = 0 @ z = " << z << " and x/z=" << (x/z) << " -> gcd(z, x/z)=" << gcd2 << '\n';
-			if (gcd2 == gcd)
+			ll _gcd2 = getGCD(z, x / z);
+			//cout << "x mod z = 0 @ z = " << z << " and x/z=" << (x/z) << " -> _gcd(z, x/z)=" << _gcd2 << '\n';
+			if (_gcd2 == _gcd)
 			{
 				cout << z << ' ' << x/z << '\n';
 				return 0;

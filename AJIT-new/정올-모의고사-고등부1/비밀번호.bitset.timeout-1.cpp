@@ -17,7 +17,7 @@ int main()
 		}
 	}
 	
-	for (x = a+1; x < 0xFFFFFFFFFFFFFFFFL; x++)
+	for (x = a+1;; x++)
 	{
 		if (bitset<64>(x).count() == i)
 		{

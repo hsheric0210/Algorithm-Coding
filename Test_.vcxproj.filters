@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BOJ\정올대비\2536.cpp">
+    <ClCompile Include="popcnt_lookup.cc">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

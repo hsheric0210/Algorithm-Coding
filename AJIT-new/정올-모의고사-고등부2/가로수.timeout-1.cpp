@@ -34,7 +34,7 @@ int main()
 	
 	for (i = a[0]; i <= a[n-1]; i+=l)
 	{
-		if (*lower_bound(a, a+n, i) != i) // binary search
+		if (*lower_bound(a, a+n, i) != i) // binary search -> time out
 			p++;
 	}
 	cout << p << '\n';
