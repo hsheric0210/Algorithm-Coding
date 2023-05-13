@@ -6,7 +6,7 @@ https://43.200.211.173/contest/17/problem/25036
 #include<cstring>
 using namespace std;
 int i, j, k, l, n, p, q;
-int arr[1000000];
+int arr[1000005];
 
 /*
 11
