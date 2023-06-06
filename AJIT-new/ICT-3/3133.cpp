@@ -26,6 +26,7 @@ int main()
 	sort(A.begin(), A.end(), [](range a, range b) {return a.begin < b.begin; });
 	for (i = 0; i < A.size()-1; i++)
 	{
+		// 구현 실수: 여러 개의 범위가 중첩되어 있을 경우, 그 중 제일 첫번째 범위만 병합되는 버그가 있었음 (while문 대신 if문 사용했을 때)
 		while (i < A.size() - 1 && A[i].includes(A[i + 1].begin))
 		{
 			//cout << "[" << A[i].begin << ", " << A[i].end << "] merge [" << A[i + 1].begin << ", " << A[i + 1].end << "]\n";
