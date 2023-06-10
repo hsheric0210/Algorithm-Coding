@@ -1,4 +1,4 @@
-// ÀÌÄ£¼ö
+// ì´ì¹œìˆ˜
 #include<iostream>
 using namespace std;
 int i, j, k, l;

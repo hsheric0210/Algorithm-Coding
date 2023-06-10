@@ -1,4 +1,6 @@
-// �����հ� ������
+// 교집합과 합집합
+// STL set_intersection, set_union 사용
+// vector에 출력값 넣은 뒤에, 반드시 뒷쪽의 쓸모없는 원소들 erase해줘야한다는 사실 명심! (unique()와 비슷함)
 #include<iostream>
 #include<algorithm>
 #include<cmath>

@@ -1,4 +1,5 @@
-// ICT-1 : RGB�Ÿ�
+// ICT-1 : RGB거리
+// 이전에서 풀었던 적 있는 기초적인 1차원x3배열 DP문제
 #include<iostream>
 #include<cmath>
 #include<algorithm>

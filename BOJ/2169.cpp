@@ -1,5 +1,5 @@
-// Olympiad > ÇÑ±¹Á¤º¸¿Ã¸²ÇÇ¾Æµå > KOI 2002 > °íµîºÎ 1¹ø: ·Îº¿ Á¶Á¾ÇÏ±â
-// ¾Æ·¡¿Þ, ¾Æ·¡¿À 2°³ °æ¿ì ³ª´©´Â DP ÀÌ¿ë Ç®ÀÌ
+// Olympiad > í•œêµ­ì •ë³´ì˜¬ë¦¼í”¼ì•„ë“œ > KOI 2002 > ê³ ë“±ë¶€ 1ë²ˆ: ë¡œë´‡ ì¡°ì¢…í•˜ê¸°
+// ì•„ëž˜ì™¼, ì•„ëž˜ì˜¤ 2ê°œ ê²½ìš° ë‚˜ëˆ„ëŠ” DP ì´ìš© í’€ì´
 #include<iostream>
 using namespace std;
 int i, j, k, l, N, M, MAP[1005][1005], A[1005], B[1005], DP[1005][1005];
@@ -11,22 +11,22 @@ int main()
 		for (j = 1; j <= M; j++)
 			cin >> MAP[i][j];
 
-	// I. Ã¹ ¹øÂ° ¿­Àº Ç×»ó ¾Æ·¡, ¶Ç´Â ¿À¸¥ÂÊÀ¸·Î¸¸ °¥ ¼ö ÀÖÀ½ ( (1,1)¿¡¼­ ½ÃÀÛÇÏ±â¿¡ )
+	// I. ì²« ë²ˆì§¸ ì—´ì€ í•­ìƒ ì•„ëž˜, ë˜ëŠ” ì˜¤ë¥¸ìª½ìœ¼ë¡œë§Œ ê°ˆ ìˆ˜ ìžˆìŒ ( (1,1)ì—ì„œ ì‹œìž‘í•˜ê¸°ì— )
 	for (i = 0; i <= M; i++)
 		DP[1][i + 1] += DP[1][i] + MAP[1][i + 1];
 
-	// II. µÎ ¹øÂ° ¿­ºÎÅÍ DP¼öÇà
+	// II. ë‘ ë²ˆì§¸ ì—´ë¶€í„° DPìˆ˜í–‰
 	for (i = 2; i <= N; i++)
 	{
 		// (1) Left vs Down
-		A[1] = DP[i - 1][1] + MAP[i][1]; // ¿ÞÂÊ Ã¹¹øÂ° -> À§¿¡¼­ ³»·Á¿À´Â °Í¸¸ °¡´É
+		A[1] = DP[i - 1][1] + MAP[i][1]; // ì™¼ìª½ ì²«ë²ˆì§¸ -> ìœ„ì—ì„œ ë‚´ë ¤ì˜¤ëŠ” ê²ƒë§Œ ê°€ëŠ¥
 		for (j = 2; j <= M; j++) A[j] = max(DP[i - 1][j], A[j - 1]) + MAP[i][j];
 
 		// (2) Right vs Down
-		B[M] = DP[i - 1][M] + MAP[i][M]; // ¿À¸¥ÂÊ ¸Ç ¸¶Áö¸· -> À§¿¡¼­ ³»·Á¿À´Â °Í¸¸ °¡´É
+		B[M] = DP[i - 1][M] + MAP[i][M]; // ì˜¤ë¥¸ìª½ ë§¨ ë§ˆì§€ë§‰ -> ìœ„ì—ì„œ ë‚´ë ¤ì˜¤ëŠ” ê²ƒë§Œ ê°€ëŠ¥
 		for (j = M - 1; j > 0; j--) B[j] = max(DP[i - 1][j], B[j + 1]) + MAP[i][j];
 
-		// (3) (1), (2) Áß ÃÖ´ë¸¦ ÇöÀç ¿­ DP¿¡ ÀúÀå
+		// (3) (1), (2) ì¤‘ ìµœëŒ€ë¥¼ í˜„ìž¬ ì—´ DPì— ì €ìž¥
 		for (j = 1; j <= M; j++) DP[i][j] = max(A[j], B[j]);
 	}
 	cout << DP[N][M];

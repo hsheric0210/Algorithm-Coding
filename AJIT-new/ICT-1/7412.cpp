@@ -1,4 +1,5 @@
-// ICT-1 : ´õÇÏ±â »çÀÌÅ¬
+// ICT-1 : ë”í•˜ê¸° ì‚¬ì´í´
+// ê·¸ëƒ¥ êµ¬í˜„.
 #include<iostream>
 #include<cmath>
 using namespace std;

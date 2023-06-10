@@ -1,4 +1,5 @@
 // ICT-2 : 소형 기관차
+// 누적합+DP
 #include<iostream>
 #include<cmath>
 #include<algorithm>
@@ -16,8 +17,10 @@ int main()
 		S[i + 1] = S[i] + p; // "누적합"
 	}
 	cin >> K;
+	// (I)첫 번째 기관차만 사용, (II)첫 번째와 두 번째 기관차 사용, (III)첫 번째와 두 번째와 세 번째 기관차 사용
 	for (i = 1; i <= 3; i++)
 	{
+		// 기관차 i대로 이끌 수 있는 차량의 최적해를 DP로 구하며, 기관차 i-1대에서의 최적해와 연결하기
 		k += K;
 		for (j = 0; j+k <= N; j++)
 			DP[j + k][i] = max(DP[j+k-1][i], DP[j+k-K][i-1] + S[j + k] - S[j + k - K]);

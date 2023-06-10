@@ -1,4 +1,4 @@
-// ICT-2 : �̷� Ž�� - BFS
+// ICT-2 : 미로 탐색 - 기초 BFS
 #include<iostream>
 #include<cmath>
 #include<algorithm>

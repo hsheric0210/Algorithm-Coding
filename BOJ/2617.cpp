@@ -1,4 +1,4 @@
-// Olympiad > ÇÑ±¹Á¤º¸¿Ã¸²ÇÇ¾Æµå > KOI 2003 > ÁßµîºÎ 1¹ø: ±¸½½Ã£±â
+// Olympiad > í•œêµ­ì •ë³´ì˜¬ë¦¼í”¼ì•„ë“œ > KOI 2003 > ì¤‘ë“±ë¶€ 1ë²ˆ: êµ¬ìŠ¬ì°¾ê¸°
 // in progress...
 #include<iostream>
 #include<vector>
@@ -15,7 +15,7 @@ int main()
 	for (i = 0; i < M; i++)
 	{
 		cin >> j >> k;
-		D[j][k] = 1; // À¯Çâ ±×·¡ÇÁ: j(bigger) -> k(smaller), °¡ÁßÄ¡=1
+		D[j][k] = 1; // ìœ í–¥ ê·¸ëž˜í”„: j(bigger) -> k(smaller), ê°€ì¤‘ì¹˜=1
 	}
 	//FW
 	for (i = 1; i <= N; i++)

@@ -1,4 +1,5 @@
-// ÀÌÄ£¼ö Ã£±â (Fi-binary Number)
+// ì´ì¹œìˆ˜ ì°¾ê¸° (Fi-binary Number)
+// DP, ì„¤ëª…ì€ ì¡°ê¸ˆ ë³µì¡í•œë° êµ¬í˜„ì€ ê°„ë‹¨í•¨.
 #include<iostream>
 #include<algorithm>
 #include<cmath>
@@ -11,8 +12,8 @@ int main()
 	Gs[1]=Ge[1] = 1, Gs[2]=Ge[2] = 2;
 	for (i = 3; i < 1000; i++)
 	{
-		Gs[i] = Gs[i - 2] + Gs[i - 1]; // ±×·ìÀÇ ½ÃÀÛ ¼öÀÇ ¼­¼ö
-		Ge[i] = Ge[i - 2] + Ge[i - 1] + 1; // ±×·ìÀÇ ³¡ ¼öÀÇ ¼­¼ö
+		Gs[i] = Gs[i - 2] + Gs[i - 1]; // ê·¸ë£¹ì˜ ì‹œì‘ ìˆ˜ì˜ ì„œìˆ˜
+		Ge[i] = Ge[i - 2] + Ge[i - 1] + 1; // ê·¸ë£¹ì˜ ë ìˆ˜ì˜ ì„œìˆ˜
 	}
 
 	j = -1;
@@ -25,7 +26,7 @@ int main()
 		bits[l] = 1;
 		K = K - Gs[l];
 	}
-	for (i = j; i > 0; i--)
+	for (i = j; i > 0; i--) // output in reverse-order
 		cout << bits[i];
 	return 0;
 }

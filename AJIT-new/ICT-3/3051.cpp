@@ -1,4 +1,5 @@
-// ����
+// 예산
+// 이진 탐색, 그러나 STL lower_bound를 사용할 수는 없는
 #include<iostream>
 #include<algorithm>
 #include<numeric>

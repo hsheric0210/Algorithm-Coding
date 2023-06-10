@@ -1,4 +1,5 @@
 // ICT-1 : 분수찾기
+// 기본적으로 '구현', 수들의 규칙성 찾아 DP로 최적화 가능
 #include<iostream>
 #include<cmath>
 #include<algorithm>

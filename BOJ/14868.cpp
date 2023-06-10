@@ -1,4 +1,4 @@
-// ¹®¸í - Union-find
+// ë¬¸ëª… - Union-find
 #include<iostream>
 #include<cmath>
 #include<algorithm>
