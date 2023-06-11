@@ -1,5 +1,4 @@
-// ¹®¸í - Union-find
-// in progress...
+// ë¬¸ëª… - Union-find
 #include<iostream>
 #include<cmath>
 #include<algorithm>

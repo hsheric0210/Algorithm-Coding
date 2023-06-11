@@ -1,4 +1,5 @@
-// ICT-1 : �ܾ� ����
+// ICT-1 : 단어 정렬
+// 그냥 정렬 함수 구현... 그리고 STL set 사용하는 것 잊지 말 것!
 #include<iostream>
 #include<cmath>
 #include<algorithm>

@@ -1,4 +1,5 @@
-// ICT-1 : �似Ǫ�� ����
+// ICT-1 : 요세푸스 문제
+// 그냥 구현. 그리고 수학
 #include<iostream>
 #include<algorithm>
 #include<cmath>

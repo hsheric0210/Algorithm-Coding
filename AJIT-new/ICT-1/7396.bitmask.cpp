@@ -1,4 +1,4 @@
-// ICT-1 : ¸·´ë±â (¹®Á¦¸¦ À¯½ÉÈ÷ ÀÐ°í ¿¹½Ã ¿©·¯ °³ »ý°¢ÇØ º¸¸é, °á±¹ ´äÀº POPCNTÀÌ´Ù)
+// ICT-1 : ë§‰ëŒ€ê¸° (ë¬¸ì œë¥¼ ìœ ì‹¬ížˆ ì½ê³  ì˜ˆì‹œ ì—¬ëŸ¬ ê°œ ìƒê°í•´ ë³´ë©´, ê²°êµ­ ë‹µì€ POPCNTì´ë‹¤)
 #include<iostream>
 #include<bitset>
 using namespace std;

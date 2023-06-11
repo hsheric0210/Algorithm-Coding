@@ -1,4 +1,5 @@
-// ICT-2 : �ĵ��� ����
+// ICT-2 : 파도반 수열
+// 그냥 규칙 찾고 DP돌리면 됨. 피보나치처럼.
 #include<iostream>
 #include<cmath>
 #include<algorithm>

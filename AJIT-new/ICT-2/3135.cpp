@@ -1,4 +1,5 @@
 // ICT-2 : 비밀편지
+// 구현: Data-decode with Error-tolerance
 #include<iostream>
 #include<cmath>
 #include<algorithm>
