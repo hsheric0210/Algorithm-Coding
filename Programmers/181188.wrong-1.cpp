@@ -1,3 +1,7 @@
+// 틀린 이유: 최적화 실패
+// 1. 범위 Merge 작업 시, 이전까지 검사했던 모든 범위를 p에 저장하고, 새로운 범위를 추가할 때마다 p 전체를 홇음 -> 시간복잡도 O(n^3)
+// 2. 새로운 Struct를 정의하거나, bit-joining (2개의 int를 1개의 long으로 합치기) 기법을 사용하지 않고 vector<int>를 그대로 사용함에서 발생하는 오버헤드
+
 #include <string>
 #include <vector>
 #include <queue>
