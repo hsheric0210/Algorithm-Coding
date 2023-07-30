@@ -28,3 +28,6 @@
 ["stone","diamond","stone","iron","iron", "stone", "iron"]
 7
 
+[1, 1, 0]
+["stone", "stone", "iron", "stone", "diamond", "diamond", "diamond", "diamond", "diamond", "diamond"]
+14
