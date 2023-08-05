@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BOJ\2626.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="AJIT-new\고급-1\17504.cpp">
+    <ClCompile Include="BOJ\정올-2023\28215.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
