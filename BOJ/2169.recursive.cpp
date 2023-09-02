@@ -1,10 +1,10 @@
-// Olympiad > ÇÑ±¹Á¤º¸¿Ã¸²ÇÇ¾Æµå > KOI 2002 > °íµîºÎ 1¹ø: ·Îº¿ Á¶Á¾ÇÏ±â
-// Àç±Í DP¸¦ ½Ã¿ë
+// Olympiad > í•œêµ­ì •ë³´ì˜¬ë¦¼í”¼ì•„ë“œ > KOI 2002 > ê³ ë“±ë¶€ 1ë²ˆ: ë¡œë´‡ ì¡°ì¢…í•˜ê¸°
+// ì¬ê·€ DPë¥¼ ì‹œìš©
 #include<iostream>
 #include<algorithm>
 #define DFLT -11235813
 using namespace std;
-int i, j, k, l, N, M, MAP[1005][1005], DP[1005][1005][4]; // 0,1,2Àº DP, 3´Â VISITED
+int i, j, k, l, N, M, MAP[1005][1005], DP[1005][1005][4]; // 0,1,2ì€ DP, 3ëŠ” VISITED
 int recurse(int, int, int);
 int pushIfValid(int i, int j, int k)
 {
@@ -14,13 +14,13 @@ int pushIfValid(int i, int j, int k)
 }
 int recurse(int i, int j, int k)
 {
-	if (i == N && j == M) return MAP[i][j]; // µµÂø!
-	if (DP[i][j][k] != DFLT) return DP[i][j][k]; // ÀÌ¹Ì Ã³¸®µÈ Ä­ Á¦¿Ü (¸Ş¸ğÀÌÁ¦ÀÌ¼Ç)
-	DP[i][j][3] = 1; // ÀÌ¹ø Å½»ö¿¡¼­ ÀÌ¹Ì Áö±İ ÀÌ Ä­À» ´õ ÀÌ»ó Å½»öÇÏÁö ¾Êµµ·Ï VISITED ÇÃ·¡±× ¼³Á¤
+	if (i == N && j == M) return MAP[i][j]; // ë„ì°©!
+	if (DP[i][j][k] != DFLT) return DP[i][j][k]; // ì´ë¯¸ ì²˜ë¦¬ëœ ì¹¸ ì œì™¸ (ë©”ëª¨ì´ì œì´ì…˜)
+	DP[i][j][3] = 1; // ì´ë²ˆ íƒìƒ‰ì—ì„œ ì´ë¯¸ ì§€ê¸ˆ ì´ ì¹¸ì„ ë” ì´ìƒ íƒìƒ‰í•˜ì§€ ì•Šë„ë¡ VISITED í”Œë˜ê·¸ ì„¤ì •
 	int x = pushIfValid(i + 1, j, 0),
 		y = pushIfValid(i, j + 1, 1),
 		z = pushIfValid(i, j - 1, 2);
-	DP[i][j][3] = 0; // ´ÙÀ½ Å½»öÀ» À§ÇØ¼­ VISITED ÇÃ·¡±× ÇØÁ¦
+	DP[i][j][3] = 0; // ë‹¤ìŒ íƒìƒ‰ì„ ìœ„í•´ì„œ VISITED í”Œë˜ê·¸ í•´ì œ
 	return DP[i][j][k] = MAP[i][j] + max({ x,y,z });
 }
 int main()

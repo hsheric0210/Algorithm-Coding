@@ -1,4 +1,4 @@
-// ÃâÃ³: https://www.acmicpc.net/board/view/42812
+// ì¶œì²˜: https://www.acmicpc.net/board/view/42812
 #include <iostream>
 
 using namespace std;
@@ -10,18 +10,18 @@ int dp[1001][1001][3];
 
 int solve(int y, int x, int dir) {
     if (y == n && x == m)
-        return map[y][x]; // µµÂø ½Ã Àç±ÍÁ¾·á
+        return map[y][x]; // ë„ì°© ì‹œ ì¬ê·€ì¢…ë£Œ
 
     int& cur = dp[y][x][dir];
-    if (cur != -987654321) return cur; // ÇöÀç Ã³¸®ÇÏ·Á´Â À§Ä¡ÀÇ dp°¡ ÀÌ¹Ì Ã³¸®µÇ¾úÀ» °æ¿ì Àç±ÍÁ¾·á
+    if (cur != -987654321) return cur; // í˜„ì¬ ì²˜ë¦¬í•˜ë ¤ëŠ” ìœ„ì¹˜ì˜ dpê°€ ì´ë¯¸ ì²˜ë¦¬ë˜ì—ˆì„ ê²½ìš° ì¬ê·€ì¢…ë£Œ
 
     int left, right, down;
     left = right = down = -987654321;
 
-    // visited-check : Àç±Í Áß ÇöÀç ÀÌ¹Ì Ã³¸®µÈ ³ëµå¸¦ ÀçÅ½»öÇÏ´Â °Í ¹æÁö
+    // visited-check : ì¬ê·€ ì¤‘ í˜„ì¬ ì´ë¯¸ ì²˜ë¦¬ëœ ë…¸ë“œë¥¼ ì¬íƒìƒ‰í•˜ëŠ” ê²ƒ ë°©ì§€
     visited[y][x] = true;
 
-    // range-check, visited-check ÈÄ Àç±Í
+    // range-check, visited-check í›„ ì¬ê·€
     if (y >= 1 && y <= n && x - 1 >= 1 && x - 1 <= m && !visited[y][x - 1]) left = solve(y, x - 1, 0);
     if (y >= 1 && y <= n && x + 1 >= 1 && x + 1 <= m && !visited[y][x + 1]) right = solve(y, x + 1, 1);
     if (y + 1 >= 1 && y + 1 <= n && x >= 1 && x <= m && !visited[y + 1][x]) down = solve(y + 1, x, 2);
@@ -38,13 +38,13 @@ int main()
         for (int j = 1; j <= m; j++) {
             cin >> map[i][j];
 
-            // ¸ğµç DPÅ×ÀÌºíÀ» ÃÊ±ê°ªÀ¸·Î ÃÊ±âÈ­
+            // ëª¨ë“  DPí…Œì´ë¸”ì„ ì´ˆê¹ƒê°’ìœ¼ë¡œ ì´ˆê¸°í™”
             dp[i][j][0] = -987654321;
             dp[i][j][1] = -987654321;
             dp[i][j][2] = -987654321;
         }
     }
-    // Àç±Í¸¦ ÅëÇÑ Ã³¸® -> ÀÏÁ¾ÀÇ DFS
+    // ì¬ê·€ë¥¼ í†µí•œ ì²˜ë¦¬ -> ì¼ì¢…ì˜ DFS
     cout << solve(1, 1, 0) << endl;
     return 0;
 }
