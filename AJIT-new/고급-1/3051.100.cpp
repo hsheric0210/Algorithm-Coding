@@ -1,8 +1,8 @@
 /*
-¹®Á¦¸í: ¿¹»ê
-±³½Ç: °í±Þ-1
-³­ÀÌµµ: Mid
-¾Ë°í¸®Áò: ÆÄ¶ó¸ÞÆ®¸¯ ¼­Ä¡(ÀÌÁø Å½»ö)
+ë¬¸ì œëª…: ì˜ˆì‚°
+êµì‹¤: ê³ ê¸‰-1
+ë‚œì´ë„: Mid
+ì•Œê³ ë¦¬ì¦˜: íŒŒë¼ë©”íŠ¸ë¦­ ì„œì¹˜(ì´ì§„ íƒìƒ‰)
 */
 #include <iostream>
 #include <numeric>
@@ -32,7 +32,7 @@ int main()
 	}
 	cin >> M;
 
-	if (k <= M) // ¹èÁ¤ °¡´É
+	if (k <= M) // ë°°ì • ê°€ëŠ¥
 	{
 		cout << l;
 		return 0;

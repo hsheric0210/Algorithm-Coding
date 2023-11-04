@@ -1,8 +1,8 @@
 /*
-ÃÖÀå Áõ°¡ ºÎºĞ¼ö¿­(Longest Increasing subsequence)
+ìµœì¥ ì¦ê°€ ë¶€ë¶„ìˆ˜ì—´(Longest Increasing subsequence)
 https://43.200.211.173/contest/18/problem/80032
 
-nlog(n) LIS ±¸Çö + ¹éÆ®·¡Å·À» ÀÌ¿ëÇÑ LIS ¹®ÀÚ¿­ Ãâ·Â
+nlog(n) LIS êµ¬í˜„ + ë°±íŠ¸ë˜í‚¹ì„ ì´ìš©í•œ LIS ë¬¸ìì—´ ì¶œë ¥
 */
 #include <iostream>
 #include <algorithm>
@@ -27,7 +27,7 @@ int main()
 		}
 		else
 		{
-			auto a = lower_bound(v.begin(), v.end(), arr[i], [](auto alpha, auto beta) { return alpha.first < beta.first; }); // ±¸Çö ½Ç¼ö I: comparator ±¸Çö »©¸ÔÀ½
+			auto a = lower_bound(v.begin(), v.end(), arr[i], [](auto alpha, auto beta) { return alpha.first < beta.first; }); // êµ¬í˜„ ì‹¤ìˆ˜ I: comparator êµ¬í˜„ ë¹¼ë¨¹ìŒ
 			bt[i] = (a - 1)->second;
 			*a = arr[i];
 		}

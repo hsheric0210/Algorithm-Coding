@@ -1,8 +1,8 @@
 /*
-¹®Á¦¸í: ¹Ì·Î Å½»ö
-±³½Ç: °í±Þ-1
-³­ÀÌµµ: Mid
-¾Ë°í¸®Áò: BFS
+ë¬¸ì œëª…: ë¯¸ë¡œ íƒìƒ‰
+êµì‹¤: ê³ ê¸‰-1
+ë‚œì´ë„: Mid
+ì•Œê³ ë¦¬ì¦˜: BFS
 */
 #include <iostream>
 #include <numeric>

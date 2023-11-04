@@ -1,5 +1,5 @@
 /*
-Ç³¼±_ajit
+í’ì„ _ajit
 https://43.200.211.173/contest/18/problem/80029
 */
 #include<iostream>
@@ -29,9 +29,9 @@ int main()
 		a_arr[i].input = arr[i]; a_arr[i].index = i;
 	}
 
-	if (m >= sum) // ¿ä±¸ÇÑ ÇÕ°è°¡ ±× ¾î¶°ÇÑ ¹æ¹ıÀ¸·Îµµ µµ´ŞÇÒ ¼ö ¾ø´Â °æ¿ì
+	if (m >= sum) // ìš”êµ¬í•œ í•©ê³„ê°€ ê·¸ ì–´ë– í•œ ë°©ë²•ìœ¼ë¡œë„ ë„ë‹¬í•  ìˆ˜ ì—†ëŠ” ê²½ìš°
 	{
-		// ÀüÃ¼¸¦ ÀÔ·Â¹ŞÀº ¼ø¼­ ±×´ë·Î Ãâ·ÂÇÏ°í Á¾·á
+		// ì „ì²´ë¥¼ ì…ë ¥ë°›ì€ ìˆœì„œ ê·¸ëŒ€ë¡œ ì¶œë ¥í•˜ê³  ì¢…ë£Œ
 		for (int i = 1; i <= n; i++)
 			cout << arr[i] << ' ';
 		cout << endl;
@@ -44,17 +44,17 @@ int main()
 	for (int i = 1; i <= n; i = next_loop_index) // SKILL: Dynamic loop index incremental (j)
 	{
 		remaining_element_count = n - i + 1; // 
-		int height_delta = a_arr[i].input - height; // ³ôÀÌ Â÷ÀÌ
-		int new_m = m - height_delta * remaining_element_count; // »õ·Î¿î ÇÕ°è
+		int height_delta = a_arr[i].input - height; // ë†’ì´ ì°¨ì´
+		int new_m = m - height_delta * remaining_element_count; // ìƒˆë¡œìš´ í•©ê³„
 		if (new_m >= 0) // check if the total count doesn't overflow
 		{
 			m = new_m;
 			height = a_arr[i].input;
 		}
-		else break; // ÀÌ¹Ì ÃÖ´ë 
+		else break; // ì´ë¯¸ ìµœëŒ€ 
 
 		// SKILL: Dynamic loop index incremental (j)
-		// ´ÙÀ½ ³ôÀÌ º¯È­°¡ ÀÏ¾î³ª´Â index¸¦ ±¸ÇÏ¿© j¿¡ ÀúÀåÇÑ´Ù
+		// ë‹¤ìŒ ë†’ì´ ë³€í™”ê°€ ì¼ì–´ë‚˜ëŠ” indexë¥¼ êµ¬í•˜ì—¬ jì— ì €ì¥í•œë‹¤
 		for (next_loop_index = i + 1; next_loop_index <= n; next_loop_index++)
 			if (a_arr[i].input < a_arr[next_loop_index].input)
 				break;

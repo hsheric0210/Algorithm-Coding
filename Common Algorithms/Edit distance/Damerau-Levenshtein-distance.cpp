@@ -1,10 +1,10 @@
 /*
 Damerau-Levenshtein distance
-Addition, Deletion, Substitution, Transposition Áö¿ø
+Addition, Deletion, Substitution, Transposition ì§€ì›
 */
 
 
-// FIXME: BOJ https://www.acmicpc.net/problem/15484¹®Á¦ 2¹ø ¿¹½Ã ½ÇÆĞ
+// FIXME: BOJ https://www.acmicpc.net/problem/15484ë¬¸ì œ 2ë²ˆ ì˜ˆì‹œ ì‹¤íŒ¨
 
 #define DP_DUMP
 #include<iostream>
@@ -32,7 +32,7 @@ int main()
 		{
 			// default LD
 			dp[i][j] = min({ dp[i - 1][j - 1] + (a[i - 1] != b[j - 1]), dp[i - 1][j] + 1, dp[i][j - 1] + 1 });
-			// ±¸Çö ½Ç¼ö I: transpose °¡´É Á¶°ÇÀ» 'a[i-1]==b[j-2] and a[i-2]==b[j-1]'·Î ÇØ¾ß ÇÏ´Âµ¥ ±×´ë½Å 'a[i-1]==b[i-2] and a[i-2]==b[i-1]' Áï j°¡ µé¾î°¡¾ß ÇÒ b-access °úÁ¤¿¡ ÀüºÎ´Ù i¸¸À» »ç¿ëÇØ ¹ö·È´Ù.
+			// êµ¬í˜„ ì‹¤ìˆ˜ I: transpose ê°€ëŠ¥ ì¡°ê±´ì„ 'a[i-1]==b[j-2] and a[i-2]==b[j-1]'ë¡œ í•´ì•¼ í•˜ëŠ”ë° ê·¸ëŒ€ì‹  'a[i-1]==b[i-2] and a[i-2]==b[i-1]' ì¦‰ jê°€ ë“¤ì–´ê°€ì•¼ í•  b-access ê³¼ì •ì— ì „ë¶€ë‹¤ ië§Œì„ ì‚¬ìš©í•´ ë²„ë ¸ë‹¤.
 			if (i - 2 >= 0 && j - 2 >= 0 && a[i - 1] == b[j - 2] && a[i - 2] == b[j - 1]) // transposition available
 				dp[i][j] = min(dp[i][j], dp[i - 2][j - 2] + 1);
 		}

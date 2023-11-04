@@ -1,12 +1,12 @@
 /*
-Æ÷µµÁÖ ½Ã½Ä
+í¬ë„ì£¼ ì‹œì‹
 https://www.acmicpc.net/problem/2156
 */
 #include <iostream>
 #include <algorithm>
 using namespace std;
-// °è´Ü¿À¸£±â(2579)¿Í À¯»çÇÑ ¹®Á¦
-// ¹İ·Ê: https://www.acmicpc.net/board/view/90739
+// ê³„ë‹¨ì˜¤ë¥´ê¸°(2579)ì™€ ìœ ì‚¬í•œ ë¬¸ì œ
+// ë°˜ë¡€: https://www.acmicpc.net/board/view/90739
 int main()
 {
 	cin.sync_with_stdio(0); cin.tie(0); cout.tie(0);

@@ -1,7 +1,7 @@
 /*
 A Game
 https://43.200.211.173/contest/19/problem/45451
-ºÎÁ¦: ¾î·Á¿î ½Ã¹Ä·¹ÀÌ¼Ç ¹®Á¦¿Í °°¾Æ º¸ÀÌÁö¸¸, ½Ç»óÀº ±× ¾î¶² ¹®Á¦º¸´Ùµµ ÇØ¹ýÀÌ °£´ÜÇÑ ¹®Á¦
+ë¶€ì œ: ì–´ë ¤ìš´ ì‹œë®¬ë ˆì´ì…˜ ë¬¸ì œì™€ ê°™ì•„ ë³´ì´ì§€ë§Œ, ì‹¤ìƒì€ ê·¸ ì–´ë–¤ ë¬¸ì œë³´ë‹¤ë„ í•´ë²•ì´ ê°„ë‹¨í•œ ë¬¸ì œ
 */
 #include<iostream>
 using namespace std;

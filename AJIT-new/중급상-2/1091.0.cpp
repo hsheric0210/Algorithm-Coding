@@ -1,8 +1,8 @@
 /*
-¹®Á¦¸í: µ¿Àü ¹Ù²ãÁÖ±â
-±³½Ç: Áß±Þ»ó-2
-³­ÀÌµµ: Mid
-¾Ë°í¸®Áò: BFSÇü Bottom-up DP, °æ¿ìÀÇ ¼ö
+ë¬¸ì œëª…: ë™ì „ ë°”ê¿”ì£¼ê¸°
+êµì‹¤: ì¤‘ê¸‰ìƒ-2
+ë‚œì´ë„: Mid
+ì•Œê³ ë¦¬ì¦˜: BFSí˜• Bottom-up DP, ê²½ìš°ì˜ ìˆ˜
 */
 #include <iostream>
 #include <algorithm>

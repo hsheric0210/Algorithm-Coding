@@ -1,6 +1,6 @@
 /*
-¹®Á¦¸í: °¡·Î¼ö
-¾Ë°í¸®Áò: GCD, À¯Å¬¸®µå È£Á¦¹ý
+ë¬¸ì œëª…: ê°€ë¡œìˆ˜
+ì•Œê³ ë¦¬ì¦˜: GCD, ìœ í´ë¦¬ë“œ í˜¸ì œë²•
 */
 #include <iostream>
 #include <algorithm>
@@ -14,7 +14,7 @@ int main()
 	cin >> N; for (i = 0; i < N; i++) { cin >> P[i]; V.insert(P[i]); }
 	if (N <= 2) { cout << 0; return 0; } // Edge case: 2
 	sort(P, P + N);
-	k = P[1] - P[0]; for (i = 1; i < N - 1; i++) k = gcd(k, P[i + 1] - P[i]); // https://www.acmicpc.net/board/view/122475 ¼öÁ¤
+	k = P[1] - P[0]; for (i = 1; i < N - 1; i++) k = gcd(k, P[i + 1] - P[i]); // https://www.acmicpc.net/board/view/122475 ìˆ˜ì •
 	auto m = minmax_element(P, P + N);
 	cout << max(0, (*(m.second) - *(m.first)) / k + 1 - N);
 	return 0;

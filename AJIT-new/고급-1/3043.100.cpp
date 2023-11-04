@@ -1,8 +1,8 @@
 /*
-¹®Á¦¸í: °ıÈ£ÀÇ °ª
-±³½Ç: °í±Ş-1
-³­ÀÌµµ: Mid
-¾Ë°í¸®Áò: Àç±Í, Nested bracket counting
+ë¬¸ì œëª…: ê´„í˜¸ì˜ ê°’
+êµì‹¤: ê³ ê¸‰-1
+ë‚œì´ë„: Mid
+ì•Œê³ ë¦¬ì¦˜: ì¬ê·€, Nested bracket counting
 */
 #include <iostream>
 #include <numeric>

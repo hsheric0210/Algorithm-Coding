@@ -1,4 +1,4 @@
-//Çï±âÂø·úÀå
+//í—¬ê¸°ì°©ë¥™ìž¥
 #include <iostream>
 #include <algorithm>
 #include <cmath>
@@ -6,17 +6,17 @@
 typedef unsigned long long ll;
 #define LIMIT (ll)1000000007
 using namespace std;
-//ºñ·Ï ÆäÀÎÆ®ÀÇ ÃÖ´ë °³¼ö°¡ 50000±îÁöÀÌÁö¸¸, 50000=n(n+1)/2 ¿¡ ´ëÀÔÇØ º¸¸é nÀº 320º¸´Ùµµ ÀÛ´Ù.
-//Áï ÃÖ´ë·Î ¸¸µé¾î Áú ¼ö ÀÖ´Â µ¿½É¿øÀÇ °³¼ö´Â 320°³µµ Ã¤ ¾ÈµÈ´Ù´Â ¸»ÀÌ´Ù.
+//ë¹„ë¡ íŽ˜ì¸íŠ¸ì˜ ìµœëŒ€ ê°œìˆ˜ê°€ 50000ê¹Œì§€ì´ì§€ë§Œ, 50000=n(n+1)/2 ì— ëŒ€ìž…í•´ ë³´ë©´ nì€ 320ë³´ë‹¤ë„ ìž‘ë‹¤.
+//ì¦‰ ìµœëŒ€ë¡œ ë§Œë“¤ì–´ ì§ˆ ìˆ˜ ìžˆëŠ” ë™ì‹¬ì›ì˜ ê°œìˆ˜ëŠ” 320ê°œë„ ì±„ ì•ˆëœë‹¤ëŠ” ë§ì´ë‹¤.
 int i, j, k, l, p, q, r, s, t, T, A, B, S[1005], x, y;
 ll Z, D[505][50005];
 int main()
 {
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
-	// S[n] = ¿ø n°³¸¦ ¸¸µé±â À§ÇØ ÇÊ¿äÇÑ ÃÖ¼Ò ÆäÀÎÆ® °³¼ö
+	// S[n] = ì› nê°œë¥¼ ë§Œë“¤ê¸° ìœ„í•´ í•„ìš”í•œ ìµœì†Œ íŽ˜ì¸íŠ¸ ê°œìˆ˜
 	for (i = 1; i < 1000; i++)
-		S[i] = i * (i + 1) / 2; // µîÂ÷¼ö¿­ ÇÕ°ø½Ä
+		S[i] = i * (i + 1) / 2; // ë“±ì°¨ìˆ˜ì—´ í•©ê³µì‹
 
 	// DP
 	D[0][0] = 1;
@@ -45,7 +45,7 @@ int main()
 		cin >> A >> B;
 		p = min(A, B), q = max(A, B);
 		r = lower_bound(S, S + 1000, q) - S;
-		if (S[r] > q) // lower_bound°¡ Ã£´Â °ÍÀº Qº¸´Ù '°°°Å³ª ´õ Å« ¼ýÀÚ'ÀÌ±â¿¡, '°°°Å³ª ±×º¸´Ù ¹Ù·Î ÀÛÀº ¼ýÀÚ'¸¦ ±¸ÇÏ±â À§ÇØ¼­´Â ÀÌ¿Í °°Àº ¹æ¹ýÀÌ ÇÊ¿äÇÔ
+		if (S[r] > q) // lower_boundê°€ ì°¾ëŠ” ê²ƒì€ Që³´ë‹¤ 'ê°™ê±°ë‚˜ ë” í° ìˆ«ìž'ì´ê¸°ì—, 'ê°™ê±°ë‚˜ ê·¸ë³´ë‹¤ ë°”ë¡œ ìž‘ì€ ìˆ«ìž'ë¥¼ êµ¬í•˜ê¸° ìœ„í•´ì„œëŠ” ì´ì™€ ê°™ì€ ë°©ë²•ì´ í•„ìš”í•¨
 			r--;
 		Z = 0;
 		t = r;

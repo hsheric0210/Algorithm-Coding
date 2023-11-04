@@ -2,19 +2,19 @@
 using namespace std;
 int i, j, k, l, A[105], N, p, q, r, s, t, u, v;
 
-//³»°¡Â§ÄÚµå
+//ë‚´ê°€ì§ ì½”ë“œ
 int verify(int n)
 {
-	for (p = 2; p <= n / 2; p++) // Å½»öÇÒ ºÎºÐ¼ö¿­ ±æÀÌ
-		for (q = 1; q <= n - p; q++) // Ã¹ ¹øÂ° ºÎºÐ¼ö¿­ ½ÃÀÛ À§Ä¡
+	for (p = 2; p <= n / 2; p++) // íƒìƒ‰í•  ë¶€ë¶„ìˆ˜ì—´ ê¸¸ì´
+		for (q = 1; q <= n - p; q++) // ì²« ë²ˆì§¸ ë¶€ë¶„ìˆ˜ì—´ ì‹œìž‘ ìœ„ì¹˜
 		{
 			s = 0;
-			for (r = q; r < q + p; r++) // ½ÇÁ¦ °Ë»ö
+			for (r = q; r < q + p; r++) // ì‹¤ì œ ê²€ìƒ‰
 			{
 				if (r + p > n)break; //prevent reading uninitialized part of sequence
 				s += (A[r] == A[r + p]);
 			}
-			if (s==p) return 0; // ºÎºÐ¼ö¿­ Áßº¹!
+			if (s==p) return 0; // ë¶€ë¶„ìˆ˜ì—´ ì¤‘ë³µ!
 		}
 	return 1;
 }
@@ -34,9 +34,9 @@ int recurse(int idx)
 		if (check(idx)) { recurse(idx + 1); cout << "next rec\n"; }
 	}
 }
-//³»°¡Â§ÄÚµå
+//ë‚´ê°€ì§ ì½”ë“œ
 
-//°¡Á®¿ÂÄÚµå
+//ê°€ì ¸ì˜¨ì½”ë“œ
 int check(int len)
 {
 	int c;
@@ -59,12 +59,12 @@ void go(int cnt) {
 	}
 
 	for (int i = 1; i <= 3; i++) {
-		if (i == A[cnt - 1]) continue; // 2°³ÀÌ»ó ¿¬¼ÓÀÌ¸é ¹Ù·Î °Å¸§
+		if (i == A[cnt - 1]) continue; // 2ê°œì´ìƒ ì—°ì†ì´ë©´ ë°”ë¡œ ê±°ë¦„
 		A[cnt] = i;
 		if (verify(cnt)) go(cnt + 1);
 	}
 }
-//°¡Á®¿ÂÄÚµå
+//ê°€ì ¸ì˜¨ì½”ë“œ
 
 int main()
 {

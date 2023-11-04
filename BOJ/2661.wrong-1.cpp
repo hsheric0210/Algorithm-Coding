@@ -1,5 +1,5 @@
-// Olympiad > ÇÑ±¹Á¤º¸¿Ã¸²ÇÇ¾Æµå > KOI 1997 > ÁßµîºÎ 1¹ø
-#define _CRT_SECURE_NO_WARNINGS // ¸ÁÇÒ VCRT
+// Olympiad > í•œêµ­ì •ë³´ì˜¬ë¦¼í”¼ì•„ë“œ > KOI 1997 > ì¤‘ë“±ë¶€ 1ë²ˆ
+#define _CRT_SECURE_NO_WARNINGS // ë§í•  VCRT
 #include<iostream>
 #include<cstring>
 #include<cstdlib>
@@ -10,14 +10,14 @@ int cmp(int i, int j, int len) { return (i < 0 || j < 0) ? -2 : strncmp(s + i, s
 int bad(int i)
 {
 	for (x = 1; x <= i + 1; x++)
-		if (!cmp(i - x + 1, i - x * 2 + 1, x)) // ±æÀÌ XÂ¥¸® ºÎºÐ¼ö¿­ °Ë»ç
+		if (!cmp(i - x + 1, i - x * 2 + 1, x)) // ê¸¸ì´ Xì§œë¦¬ ë¶€ë¶„ìˆ˜ì—´ ê²€ì‚¬
 			return true;
 	return false;
 }
 int main()
 {
-	cin >> N;//¤·¤Ç¤¿¤¤¤¸¤Ã¤¤¤¼¤¿¤±¤µ¤À¤¡!
-	// ÇÏ³ªÇÏ³ª ºÙ¿©³ª°¡¸ç ºÎºÐ¼ö¿­ °Ë»ç
+	cin >> N;//ã…‡ã…—ã…ã„´ã…ˆã…“ã„´ã…Œã…ã…ã……ã…ã„±!
+	// í•˜ë‚˜í•˜ë‚˜ ë¶™ì—¬ë‚˜ê°€ë©° ë¶€ë¶„ìˆ˜ì—´ ê²€ì‚¬
 	s[0] = '1';
 	for (i = 1; i < N; i++)
 	{
@@ -29,7 +29,7 @@ int main()
 				goto ok;
 		}
 		cout << "all-three fail @ i=" << i << '\n';
-		// all three failed the test -> ¹éÆ®·¡Å·ÇÏ¸ç ÀÌÀü ¼öµé Áß 3ÀÌ ¾Æ´Ñ Ã¹ ¹øÂ° ¼ö¸¦ 1 Áõ°¡½ÃÅ°°í ´Ù½Ã ½Ãµµ
+		// all three failed the test -> ë°±íŠ¸ëž˜í‚¹í•˜ë©° ì´ì „ ìˆ˜ë“¤ ì¤‘ 3ì´ ì•„ë‹Œ ì²« ë²ˆì§¸ ìˆ˜ë¥¼ 1 ì¦ê°€ì‹œí‚¤ê³  ë‹¤ì‹œ ì‹œë„
 		for (z = 1;; z++)
 		{
 			if (s[i - z] < '3')

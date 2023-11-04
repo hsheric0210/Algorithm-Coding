@@ -1,5 +1,5 @@
-// ICT-1 : ºÐ¼öÃ£±â
-// ±âº»ÀûÀ¸·Î '±¸Çö', ¼öµéÀÇ ±ÔÄ¢¼º Ã£¾Æ DP·Î ÃÖÀûÈ­ °¡´É
+// ICT-1 : ë¶„ìˆ˜ì°¾ê¸°
+// ê¸°ë³¸ì ìœ¼ë¡œ 'êµ¬í˜„', ìˆ˜ë“¤ì˜ ê·œì¹™ì„± ì°¾ì•„ DPë¡œ ìµœì í™” ê°€ëŠ¥
 #include<iostream>
 #include<cmath>
 #include<algorithm>
@@ -30,13 +30,13 @@ int main()
 	p = A[x]>B[y];
 	q = p ? x : y;
 	r = p ? A[x] : B[y];
-	if (p) // ÁÂÇÏ´ÜÀ¸·Î ³»·Á°¡±â
+	if (p) // ì¢Œí•˜ë‹¨ìœ¼ë¡œ ë‚´ë ¤ê°€ê¸°
 	{
 		n -= r;
 		x = 1 + n;
 		y = q + 1 - n;
 	}
-	else // ¿ì»ó´ÜÀ¸·Î ¿Ã¶ó°¡±â
+	else // ìš°ìƒë‹¨ìœ¼ë¡œ ì˜¬ë¼ê°€ê¸°
 	{
 		n -= r;
 		x = q + 1 - n;

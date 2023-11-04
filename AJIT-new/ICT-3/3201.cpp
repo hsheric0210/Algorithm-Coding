@@ -1,4 +1,4 @@
-// �������
+// 기업투자
 #include<iostream>
 #include<algorithm>
 #include<cmath>
@@ -23,11 +23,11 @@ int main()
 		{
 			cin >> A[x][j];
 			if (j == 1)
-				D[x][j] = A[x][j]; // ù ��° ȸ�翡'��' �����ϴ� ���, �����ش� �׻� ù ��° ȸ���� �Ͱ� ����
+				D[x][j] = A[x][j]; // 첫 번째 회사에'만' 투자하는 경우, 최적해는 항상 첫 번째 회사의 것과 동일
 		}
 	}
 
-	for (i = 2; i <= M; i++) // �� ��° ȸ����� ����ؼ� �ٿ�������...
+	for (i = 2; i <= M; i++) // 두 번째 회사부터 계속해서 붙여나가며...
 	{
 		for (j = 1; j <= N; j++)
 		{

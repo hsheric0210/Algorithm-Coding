@@ -1,4 +1,4 @@
-// ICT-1 : ¸·´ë±â
+// ICT-1 : ë§‰ëŒ€ê¸°
 #include<iostream>
 #include<cmath>
 #include<algorithm>

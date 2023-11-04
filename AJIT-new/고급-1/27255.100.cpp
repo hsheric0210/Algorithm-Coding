@@ -1,8 +1,8 @@
 /*
-¹®Á¦¸í: Á¦·Î
-±³½Ç: °í±Þ-1
-³­ÀÌµµ: Mid
-¾Ë°í¸®Áò: ±¸Çö
+ë¬¸ì œëª…: ì œë¡œ
+êµì‹¤: ê³ ê¸‰-1
+ë‚œì´ë„: Mid
+ì•Œê³ ë¦¬ì¦˜: êµ¬í˜„
 */
 #include <iostream>
 #include <numeric>

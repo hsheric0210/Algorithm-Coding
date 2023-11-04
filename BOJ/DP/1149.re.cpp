@@ -1,5 +1,5 @@
 /*
-RGB°Å¸®
+RGBê±°ë¦¬
 https://www.acmicpc.net/problem/1149
 */
 #include <cstdio>
@@ -35,9 +35,9 @@ int main(void)
 		// 0 - Red
 		// 1 - Green
 		// 2 - Blue
-		dp[i][0] = min(dp[i - 1][1], dp[i - 1][2]) + costs[i - 1][0]; // ÀÌ¹øÀÌ RedÀÌ¸é ÀÌÀüÀº Green or Blue (¡ñ ÀÌÀü Áı°ú ´ÙÀ½ ÁıÀº »öÀÌ °°À¸¸é ¾ÈµÊ)
-		dp[i][1] = min(dp[i - 1][0], dp[i - 1][2]) + costs[i - 1][1]; // ÀÌ¹øÀÌ GreenÀÌ¸é ÀÌÀüÀº Red or Blue (¡ñ ÀÌÀü Áı°ú ´ÙÀ½ ÁıÀº »öÀÌ °°À¸¸é ¾ÈµÊ)
-		dp[i][2] = min(dp[i - 1][0], dp[i - 1][1]) + costs[i - 1][2]; // ÀÌ¹øÀÌ BlueÀÌ¸é ÀÌÀüÀº Red or Green (¡ñ ÀÌÀü Áı°ú ´ÙÀ½ ÁıÀº »öÀÌ °°À¸¸é ¾ÈµÊ)
+		dp[i][0] = min(dp[i - 1][1], dp[i - 1][2]) + costs[i - 1][0]; // ì´ë²ˆì´ Redì´ë©´ ì´ì „ì€ Green or Blue (âˆµ ì´ì „ ì§‘ê³¼ ë‹¤ìŒ ì§‘ì€ ìƒ‰ì´ ê°™ìœ¼ë©´ ì•ˆë¨)
+		dp[i][1] = min(dp[i - 1][0], dp[i - 1][2]) + costs[i - 1][1]; // ì´ë²ˆì´ Greenì´ë©´ ì´ì „ì€ Red or Blue (âˆµ ì´ì „ ì§‘ê³¼ ë‹¤ìŒ ì§‘ì€ ìƒ‰ì´ ê°™ìœ¼ë©´ ì•ˆë¨)
+		dp[i][2] = min(dp[i - 1][0], dp[i - 1][1]) + costs[i - 1][2]; // ì´ë²ˆì´ Blueì´ë©´ ì´ì „ì€ Red or Green (âˆµ ì´ì „ ì§‘ê³¼ ë‹¤ìŒ ì§‘ì€ ìƒ‰ì´ ê°™ìœ¼ë©´ ì•ˆë¨)
 	}
 
 	cout << min(min(dp[n][0], dp[n][1]), dp[n][2]) << endl;

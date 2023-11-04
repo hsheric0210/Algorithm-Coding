@@ -1,5 +1,5 @@
-// ICT-2 : ¼ÒÇü ±â°üÂ÷
-// ´©ÀûÇÕ+DP
+// ICT-2 : ì†Œí˜• ê¸°ê´€ì°¨
+// ëˆ„ì í•©+DP
 #include<iostream>
 #include<cmath>
 #include<algorithm>
@@ -14,18 +14,18 @@ int main()
 	for (i = 0; i < N; i++)
 	{
 		cin >> p;
-		S[i + 1] = S[i] + p; // "´©ÀûÇÕ"
+		S[i + 1] = S[i] + p; // "ëˆ„ì í•©"
 	}
 	cin >> K;
-	// (I)Ã¹ ¹øÂ° ±â°üÂ÷¸¸ »ç¿ë, (II)Ã¹ ¹øÂ°¿Í µÎ ¹øÂ° ±â°üÂ÷ »ç¿ë, (III)Ã¹ ¹øÂ°¿Í µÎ ¹øÂ°¿Í ¼¼ ¹øÂ° ±â°üÂ÷ »ç¿ë
+	// (I)ì²« ë²ˆì§¸ ê¸°ê´€ì°¨ë§Œ ì‚¬ìš©, (II)ì²« ë²ˆì§¸ì™€ ë‘ ë²ˆì§¸ ê¸°ê´€ì°¨ ì‚¬ìš©, (III)ì²« ë²ˆì§¸ì™€ ë‘ ë²ˆì§¸ì™€ ì„¸ ë²ˆì§¸ ê¸°ê´€ì°¨ ì‚¬ìš©
 	for (i = 1; i <= 3; i++)
 	{
-		// ±â°üÂ÷ i´ë·Î ÀÌ²ø ¼ö ÀÖ´Â Â÷·®ÀÇ ÃÖÀûÇØ¸¦ DP·Î ±¸ÇÏ¸ç, ±â°üÂ÷ i-1´ë¿¡¼­ÀÇ ÃÖÀûÇØ¿Í ¿¬°áÇÏ±â
+		// ê¸°ê´€ì°¨ iëŒ€ë¡œ ì´ëŒ ìˆ˜ ìžˆëŠ” ì°¨ëŸ‰ì˜ ìµœì í•´ë¥¼ DPë¡œ êµ¬í•˜ë©°, ê¸°ê´€ì°¨ i-1ëŒ€ì—ì„œì˜ ìµœì í•´ì™€ ì—°ê²°í•˜ê¸°
 		k += K;
 		for (j = 0; j+k <= N; j++)
 			DP[j + k][i] = max(DP[j+k-1][i], DP[j+k-K][i-1] + S[j + k] - S[j + k - K]);
 
-		// ¾î¶»°Ô ÀÛµ¿ÇÏ´ÂÁö´Â ¾Æ·¡ ´ýÇÁ¹® È°¼ºÈ­½ÃÅ°¸é ½±°Ô ¾Ë ¼ö ÀÖÀ» °ÍÀÌ´Ù
+		// ì–´ë–»ê²Œ ìž‘ë™í•˜ëŠ”ì§€ëŠ” ì•„ëž˜ ë¤í”„ë¬¸ í™œì„±í™”ì‹œí‚¤ë©´ ì‰½ê²Œ ì•Œ ìˆ˜ ìžˆì„ ê²ƒì´ë‹¤
 		//#define DUMP
 
 		// DEBUG

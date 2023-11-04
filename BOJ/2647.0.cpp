@@ -1,6 +1,6 @@
 /*
-¹®Á¦¸í: °ËÀºÁ¡°ú ÇÏ¾áÁ¡ ¿¬°á
-¾Ë°í¸®Áò: Àç±Í, DP
+ë¬¸ì œëª…: ê²€ì€ì ê³¼ í•˜ì–€ì  ì—°ê²°
+ì•Œê³ ë¦¬ì¦˜: ì¬ê·€, DP
 */
 #include <iostream>
 #include <algorithm>
@@ -17,8 +17,8 @@ void recurse(int begin, int end)
 	for (int i = begin + 1; i < end; i += 2)
 	{
 		if (S[begin] == S[i]) continue;
-		recurse(begin + 1, i - 1); // (begin+1)..(i-1) - ¹üÀ§ ¾ÈÂÊ
-		recurse(i + 1, end); // (i+1)..L - ¹üÀ§ ¹Ù±ùÂÊ ³ª¸ÓÁö
+		recurse(begin + 1, i - 1); // (begin+1)..(i-1) - ë²”ìœ„ ì•ˆìª½
+		recurse(i + 1, end); // (i+1)..L - ë²”ìœ„ ë°”ê¹¥ìª½ ë‚˜ë¨¸ì§€
 		DP[begin][end] = min(DP[begin][end], (uc)(DP[begin + 1][i - 1] + DP[i + 1][end]));
 	}
 }

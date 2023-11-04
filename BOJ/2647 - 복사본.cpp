@@ -1,6 +1,6 @@
 /*
-¹®Á¦¸í: °ËÀºÁ¡°ú ÇÏ¾áÁ¡ ¿¬°á
-¾Ë°í¸®Áò: ½ºÅÃ, DP
+ë¬¸ì œëª…: ê²€ì€ì ê³¼ í•˜ì–€ì  ì—°ê²°
+ì•Œê³ ë¦¬ì¦˜: ìŠ¤íƒ, DP
 */
 #include <iostream>
 #include <algorithm>
@@ -42,8 +42,8 @@ int main()
 	//for ()
 
 	// 2. try merging two adjacent pair of connection
-	// '¦£¦¡¦¡¦¤¦£¦¡¦¡¦¤' to '¦£¦¡¦¡¦¡¦¡¦¡¦¤'
-	//  ¦¢ A  ¦¢¦¢  B ¦¢      ¦¢ A ¦£¦¤ B ¦¢ 
+	// 'â”Œâ”€â”€â”â”Œâ”€â”€â”' to 'â”Œâ”€â”€â”€â”€â”€â”'
+	//  â”‚ A  â”‚â”‚  B â”‚      â”‚ A â”Œâ” B â”‚ 
 	sort(conns.begin(), conns.end(), [](conn a, conn b) { return a.nestlvl == b.nestlvl ? a.begin < b.begin : a.nestlvl < b.nestlvl; });
 	for (i = 0, j = conns.size() - 1; i < j; i++)
 	{

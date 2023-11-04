@@ -1,6 +1,6 @@
 /*
-Ή®Α¦Έν: ΐϊΏο
-ΎΛ°νΈ®Ας: Floyd-warshall
+λ¬Έμ λª…: μ €μΈ
+μ•κ³ λ¦¬μ¦: Floyd-warshall
 */
 #include <iostream>
 using namespace std;
@@ -10,7 +10,7 @@ int main()
 	cin >> N >> M;
 	for (i = 0; i < M; i++)
 	{
-		cin >> p >> q; // Ή«°Τ΄Β p > q ΐΜ΄Ω
+		cin >> p >> q; // λ¬΄κ²λ” p > q μ΄λ‹¤
 		F[p][q] = 1;
 	}
 

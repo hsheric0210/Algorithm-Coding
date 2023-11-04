@@ -1,5 +1,5 @@
 /*
-°è´Ü ¿À¸£±â
+ê³„ë‹¨ ì˜¤ë¥´ê¸°
 https://www.acmicpc.net/problem/2579
 */
 #include <algorithm>
@@ -16,11 +16,11 @@ dp 0   10  10+20 35 ...
 
 int main()
 {
-    // °è´Ü °¹¼ö
+    // ê³„ë‹¨ ê°¯ìˆ˜
     int n = 0;
     cin >> n;
 
-    // °è´Ü Á¡¼ö
+    // ê³„ë‹¨ ì ìˆ˜
     int* s = new int[max(n + 1, 3)]{ 0, };
     for (int i = 1; i <= n; i++)
         cin >> s[i];
@@ -39,7 +39,7 @@ int main()
 
     cout << dp[n] << endl;
 
-    // ¸Ş¸ğ¸® ÇØÁ¦
+    // ë©”ëª¨ë¦¬ í•´ì œ
     delete[] dp;
     delete[] s;
 }

@@ -1,5 +1,5 @@
 /*
-°è´Ü ¿À¸£±â
+ê³„ë‹¨ ì˜¤ë¥´ê¸°
 https://www.acmicpc.net/problem/2579
 */
 #include <cstdio>
@@ -8,7 +8,7 @@ https://www.acmicpc.net/problem/2579
 #include <string.h>
 
 /*
-f(n) = 'n¹øÂ° °è´ÜÀ» ¹âÀ¸¸é¼­, ¾òÀ» ¼ö ÀÖ´Â Á¡¼öÀÇ ÃÖ´ñ°ª'
+f(n) = 'në²ˆì§¸ ê³„ë‹¨ì„ ë°Ÿìœ¼ë©´ì„œ, ì–»ì„ ìˆ˜ ìžˆëŠ” ì ìˆ˜ì˜ ìµœëŒ“ê°’'
 
 f(n) = max(f(n-1), f(n-2))
 */
@@ -31,7 +31,7 @@ int main()
 	for (int i = 2; i <= n; i++)
 	{
 		int m;
-		if (++increment >= 3) // ¿¬¼ÓµÈ ¼¼ °³ÀÇ °è´Ü ¹â´Â °æ¿ì ¹æÁö
+		if (++increment >= 3) // ì—°ì†ëœ ì„¸ ê°œì˜ ê³„ë‹¨ ë°ŸëŠ” ê²½ìš° ë°©ì§€
 		{
 			m = dp[i - 2];
 			increment = 0;

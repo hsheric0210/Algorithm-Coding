@@ -1,7 +1,7 @@
 /*
-¹®Á¦¸í: ±³Â÷ÇÏÁö ¾Ê´Â ¿øÀÇ ÇöµéÀÇ ÃÖ´ëÁýÇÕ
-¾Ë°í¸®Áò:
-** Áß´Ü
+ë¬¸ì œëª…: êµì°¨í•˜ì§€ ì•ŠëŠ” ì›ì˜ í˜„ë“¤ì˜ ìµœëŒ€ì§‘í•©
+ì•Œê³ ë¦¬ì¦˜:
+** ì¤‘ë‹¨
 */
 #include <iostream>
 #include <algorithm>
