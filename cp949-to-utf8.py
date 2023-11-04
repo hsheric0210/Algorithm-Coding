@@ -1,3 +1,5 @@
+# 실행 시 이 이 파일이 위치하는 폴더 하위의 모든 폴더의 C/C++ 소스 코드 파일들에 대하여 인코딩을 UTF-8로 변경합니다.
+
 import os
 from glob import glob
 import shutil
@@ -45,7 +47,7 @@ for file_name in file_list:
                             break
                         to_file.write(buffer)
             os.remove(file_name)
-            shutil.move(to_file_name, file_name) # overwrite
+            shutil.move(to_file_name, file_name)
         except:
             traceback.print_exc()
         continue
