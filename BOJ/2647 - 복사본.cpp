@@ -23,7 +23,7 @@ int main()
 	string s;
 	cin >> i >> s;
 
-	// 1. tree-ize
+	// 1. find nestings
 	vector<conn>conns;
 	deque<pair<int, char>>S;
 	for (i = 0, j = s.length(); i < j; i++)
@@ -38,6 +38,9 @@ int main()
 		S.push_back(make_pair(i, s[i]));
 	}
 
+	// 2. tree-ize
+	//for ()
+
 	// 2. try merging two adjacent pair of connection
 	// '忙式式忖忙式式忖' to '忙式式式式式忖'
 	//  弛 A  弛弛  B 弛      弛 A 忙忖 B 弛 
@@ -45,7 +48,8 @@ int main()
 	for (i = 0, j = conns.size() - 1; i < j; i++)
 	{
 		vector<conn> new_conns;
-		if (conns[i].nestlvl != conns[i + 1].nestlvl) continue;
+		if (conns[i].nestlvl != conns[i + 1].nestlvl) continue; // must have same nesting level
+		if (conns[i].end + 1 < conns[i + 1].begin) continue; // must adjacent
 
 		// copy other connections
 		for (k = 0; k < i; k++)
@@ -56,9 +60,12 @@ int main()
 		// try merge conns[i] and conns[i+1]
 		new_conns.push_back({ conns[i].begin, conns[i + 1].end, conns[i].nestlvl + 1 }); // outer
 		new_conns.push_back({ conns[i].end, conns[i].begin, 1 }); // inner (nesting level is always 1)
-
-		if (sum(conns) < sum(new_conns)) // compare
+		
+		x = sum(conns);
+		y = sum(new_conns);
+		if (x > y) // compare
 		{
+			cout << "Merging connection " << i << '(' << conns[i].begin+1 << " - " << conns[i].end + 1 << ") and " << i + 1 << '(' << conns[i+1].begin + 1 << " - " << conns[i+1].end + 1 << ") is better(" << x << " > " << y << ")\n";
 			conns = new_conns; // and exchange
 			sort(conns.begin(), conns.end(), [](conn a, conn b) { return a.nestlvl == b.nestlvl ? a.begin < b.begin : a.nestlvl < b.nestlvl; });
 		}
@@ -67,6 +74,6 @@ int main()
 	sort(conns.begin(), conns.end(), [](conn a, conn b) { return a.begin < b.begin; });
 
 	cout << sum(conns) << '\n';
-	for (conn c : conns) cout << c.begin+1 << ' ' << c.end+1 << '\n';
+	for (conn c : conns) cout << c.begin+1 << ' ' << c.end+1 << ' ' << v-c.nestlvl+1 << '\n';
 	return 0;
 }
