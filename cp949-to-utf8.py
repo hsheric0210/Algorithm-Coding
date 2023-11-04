@@ -49,5 +49,3 @@ for file_name in file_list:
         except:
             traceback.print_exc()
         continue
-    
-    print(f"WRN: File {file_name} utf8={is_utf8} default={is_default}")
