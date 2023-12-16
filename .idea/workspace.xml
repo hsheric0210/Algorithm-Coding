@@ -1,37 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ad72bc49-2a6c-4aea-94f3-d0c52c795896" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Test_.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/problem_45480_test_cases.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100010.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100010.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100010.hwp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100011.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100011.hwp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100011.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python3/AJIT/17504.hwp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python3/AJIT/17504.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python3/AJIT/1831.hwp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python3/AJIT/1831.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm-Coding.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm-Coding.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm-Coding.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm-Coding.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/17504.100.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/17504.100.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2XhoHFhPyjDAIzFi0MFFIj5CWRz" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -42,5 +66,8 @@
       <updated>1699090591919</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

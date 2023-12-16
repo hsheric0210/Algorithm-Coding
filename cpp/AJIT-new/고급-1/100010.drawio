@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net" modified="2023-11-11T11:29:31.347Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="MHjB0ohH7a_TLBG0t3zH" version="22.1.0" type="device">
+  <diagram name="페이지-1" id="EJSUXUnxmNZQ59igwNqY">
+    <mxGraphModel dx="1235" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ee5bAfjRIkiI-G8iqfwL-2" target="Ee5bAfjRIkiI-G8iqfwL-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-19" value="아니오" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=30;" vertex="1" connectable="0" parent="Ee5bAfjRIkiI-G8iqfwL-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-2" value="스택 A에&lt;br style=&quot;font-size: 18px;&quot;&gt;찾으려는 책이 존재하는가?" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.08;base=10;position2=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="210" y="30" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-3" value="스택 A에서 해당 책 제거하기&lt;br style=&quot;font-size: 18px;&quot;&gt;다음 책 탐색 시작" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="90" y="460" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ee5bAfjRIkiI-G8iqfwL-4" target="Ee5bAfjRIkiI-G8iqfwL-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-17" value="아니오" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=30;" vertex="1" connectable="0" parent="Ee5bAfjRIkiI-G8iqfwL-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ee5bAfjRIkiI-G8iqfwL-4" target="Ee5bAfjRIkiI-G8iqfwL-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-16" value="예" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=30;" vertex="1" connectable="0" parent="Ee5bAfjRIkiI-G8iqfwL-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-4" value="스택 A의 마지막 책이&lt;br style=&quot;font-size: 18px;&quot;&gt;찾으려는 책과 같은가?" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.08;base=10;position2=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="200" y="210" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-5" value="스택 A의 마지막 책을&lt;br style=&quot;font-size: 18px;&quot;&gt;스택 B로 옮기기" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="330" y="460" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-6" value="스택 B의 마지막 책을&lt;br style=&quot;font-size: 18px;&quot;&gt;스택 A로 옮기기" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="490" y="200" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Ee5bAfjRIkiI-G8iqfwL-2" target="Ee5bAfjRIkiI-G8iqfwL-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="120" />
+              <mxPoint x="310" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-18" value="예" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=30;" vertex="1" connectable="0" parent="Ee5bAfjRIkiI-G8iqfwL-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="Ee5bAfjRIkiI-G8iqfwL-6" target="Ee5bAfjRIkiI-G8iqfwL-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="230" />
+              <mxPoint x="730" y="10" />
+              <mxPoint x="420" y="10" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=30;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="Ee5bAfjRIkiI-G8iqfwL-3" target="Ee5bAfjRIkiI-G8iqfwL-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="510" />
+              <mxPoint x="70" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ee5bAfjRIkiI-G8iqfwL-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="Ee5bAfjRIkiI-G8iqfwL-5" target="Ee5bAfjRIkiI-G8iqfwL-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="425" y="580" />
+              <mxPoint x="30" y="580" />
+              <mxPoint x="30" y="10" />
+              <mxPoint x="320" y="10" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

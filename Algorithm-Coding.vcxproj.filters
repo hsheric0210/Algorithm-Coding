@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpp\BOJ\2485.100.cpp">
+    <ClCompile Include="cpp\AJIT-new\고급-2\100008.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

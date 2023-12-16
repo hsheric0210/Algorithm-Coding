@@ -15,39 +15,49 @@ using namespace std;
 
 int K, i, j, k, l, m, n, o, p, q, r, s, t, x, y, z;
 int G[15];
-unordered_map<int, int>V;
 vector<int>S;
 void R(int offset, int prev)
 {
 	for (int i = offset; i < K; i++)
 	{
 		int val = prev + G[i];
-		V[val] = 1;
 		S.push_back(val);
-		R(i+1,val);
+		R(i + 1, val);
 	}
 }
 int main()
 {
+	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 	cin >> K;
 	for (i = 0; i < K; i++) { cin >> G[i]; l += G[i]; }
-	R(0, 0); // 재귀로 1 채우기
+	R(0, 0); // 재귀로 1 채울 위치 목록 
+
+	vector<int>V(l + 1);
 
 	sort(S.begin(), S.end());
-	S.erase(unique(S.begin(), S.end()), S.end()); // nordered_set에다가 넣고(중복제거), 다시 set으로 옮기고(정렬) 하는 것보다는 그냥 sort 후 unique 하는 것이 훨씬 빠름.
+	S.erase(unique(S.begin(), S.end()), S.end()); // python처럼 vector->unordered_set->vector 변환하는 것 보다는 이 방법이 훨씬 더 빠름
 
-	for (i = 1, j = S.size(); i < j; i++) // 그리디로 2 채우기
+	// 1 채우고 칸 개수 세기
+	for (i = 0; i < S.size(); i++)
 	{
-		for (k = 0; k < i; k++)
+		V[S[i]] = 1;
+		z++;
+	}
+
+	// 그리디로 2 채우고 칸 개수 세기
+	for (i = 1, j = S.size(); i < j; i++)
+	{
+		//for (k = 0; k < i; k++)
+		for (k = i - 1; k >= 0; k--)
 		{
 			x = S[i] - S[k];
-			if (x > 0 && !V[x])
+			if (!V[x])
 			{
 				V[x] = 2;
-				S.push_back(x); // no needs to be checked for duplicates
+				z++;
 			}
 		}
 	}
-	cout << l - S.size() << '\n';
+	cout << l - z << '\n';
 	return 0;
 }
