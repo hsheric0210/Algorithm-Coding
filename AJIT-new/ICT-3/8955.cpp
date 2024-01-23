@@ -1,4 +1,4 @@
-// ¿Ã¸²ÇÈ
+// ì˜¬ë¦¼í”½
 #include<iostream>
 #include<algorithm>
 #include<cmath>
@@ -13,7 +13,7 @@ int main()
 	sort(A, A + N, [](T a, T b) {return a.g > b.g || (a.g == b.g && a.s > b.s) || (a.g == b.g && a.s == b.s && a.b > b.b); });
 	//for (i = 0; i < N; i++)cout << A[i].a << ", " << A[i].g << ", " << A[i].s << ", " << A[i].b << '\n';
 	auto t = find_if(A, A + N, [](T a) {return a.a == K; });
-	j = find_if(A, A + N, [&t](T a) {return a.g == t->g && a.s == t->s && a.b == t->b; })-A+1; // ¸Ç À§¿¡¼­ºÎÅÍ ÇØ´ç ±¹°¡¿Í ±İÀºµ¿¸Ş´Ş ¼ıÀÚ °°Àº ³ª¶ó(µî¼ö°¡ °°Àº ³ª¶ó) °Ë»ö -> find_if°¡ linear searchÀÌ±â¿¡ °¡´É
+	j = find_if(A, A + N, [&t](T a) {return a.g == t->g && a.s == t->s && a.b == t->b; })-A+1; // ë§¨ ìœ„ì—ì„œë¶€í„° í•´ë‹¹ êµ­ê°€ì™€ ê¸ˆì€ë™ë©”ë‹¬ ìˆ«ì ê°™ì€ ë‚˜ë¼(ë“±ìˆ˜ê°€ ê°™ì€ ë‚˜ë¼) ê²€ìƒ‰ -> find_ifê°€ linear searchì´ê¸°ì— ê°€ëŠ¥
 	cout << j;
 	return 0;
 }

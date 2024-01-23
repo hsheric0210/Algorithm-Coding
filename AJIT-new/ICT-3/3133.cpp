@@ -1,4 +1,5 @@
 // 놀이공원
+// 범위 합치기(Range-merge) & 빈 범위 탐색
 #include<iostream>
 #include<algorithm>
 #include<vector>

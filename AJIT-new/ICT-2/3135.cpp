@@ -1,5 +1,5 @@
-// ICT-2 : ºñ¹ÐÆíÁö
-// ±¸Çö: Data-decode with Error-tolerance
+// ICT-2 : ë¹„ë°€íŽ¸ì§€
+// êµ¬í˜„: Data-decode with Error-tolerance
 #include<iostream>
 #include<cmath>
 #include<algorithm>
