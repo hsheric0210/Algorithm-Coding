@@ -1,0 +1,33 @@
+# incomplete final-block
+[0,1,1]
+["stone","stone","stone","stone","stone","iron","iron","iron","iron"]
+9
+
+# diamond pickaxe table check
+[1,0,0]
+["stone","diamond","stone","iron","iron"]
+5
+
+# iron pickaxe table check
+[0,1,0]
+["stone","diamond","stone","iron","iron"]
+9
+
+# stone pickaxe table check
+[0,0,1]
+["stone","diamond","stone","iron","iron"]
+37
+
+# no pickaxe
+[0,0,0]
+["stone","diamond","stone","iron","iron"]
+0
+
+# too-many-pickaxes
+[5,5,5]
+["stone","diamond","stone","iron","iron", "stone", "iron"]
+7
+
+[1, 1, 0]
+["stone", "stone", "iron", "stone", "diamond", "diamond", "diamond", "diamond", "diamond", "diamond"]
+14

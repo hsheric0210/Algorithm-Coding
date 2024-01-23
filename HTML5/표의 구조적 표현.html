@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>표의 구조적인 표현</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h3>표의 구조적인 표현</h3>
+        <table border="10">
+            <caption>과목별 추천도서</caption>
+            <thead>
+                <tr>
+                    <th>과목</th>
+                    <th>책제목</th>
+                    <th>저자</th>
+                    <th>출판사</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td>합계</td>
+                    <td colspan="3" align="center">3권</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td rowspan="3">웹프로그래밍</td>
+                    <td>웹프로그래밍 입문</td>
+                    <td>임순범, 백희민</td>
+                    <td>생능</td>
+                </tr>
+                <tr>
+                    <td>소셜미디어 시대의 인터넷활용</td>
+                    <td>최윤절, 임순범</td>
+                    <td>생능</td>
+                </tr>
+                <tr>
+                    <td>What is HTML5?</td>
+                    <td>B. McLaughlin</td>
+                    <td>O'reilly</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </body>
+</html>
