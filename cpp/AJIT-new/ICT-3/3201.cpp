@@ -1,4 +1,5 @@
 // 기업투자
+// '투자할 회사를 추가해 나가며' DP
 #include<iostream>
 #include<algorithm>
 #include<cmath>
@@ -56,6 +57,7 @@ int main()
 
 	cout << D[N][M] << '\n';
 	
+	// 백트래킹...
 	x = N, y = M, z = N;
 	deque<int>v;
 	while (y > 1)

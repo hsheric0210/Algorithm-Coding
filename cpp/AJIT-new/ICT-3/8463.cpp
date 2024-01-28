@@ -1,4 +1,6 @@
 // 회의실 배정
+// 모든 회의를 시작시간, 시작시간 동일 시 끝시간에 대해 정렬;
+// 제일 먼저 시작하는 회의 찾고, 그 회의 끝나는 시간보다 늦게, 그리고 가장 먼저 시작하는 회의 찾고, ... (반복)
 #include<iostream>
 #include<algorithm>
 using namespace std;
