@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpp\AJIT-new\고급-2\100009.cpp">
+    <ClCompile Include="cpp\AJIT-new\정올중고등부-2\42324-최장_공통_부문_문자열.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
