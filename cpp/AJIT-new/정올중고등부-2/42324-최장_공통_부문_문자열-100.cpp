@@ -34,7 +34,7 @@ int main()
 			continue;
 		}
 
-		if (D[t.p - 1][t.q] > D[t.p][t.q - 1])
+		if (D[t.p - 1][t.q] >= D[t.p][t.q - 1])
 			d.push({ t.p - 1, t.q });
 		else
 			d.push({ t.p, t.q - 1 });

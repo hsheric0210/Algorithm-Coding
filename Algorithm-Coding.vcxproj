@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpp\AJIT-new\정올중고등부-2\42324-최장_공통_부문_문자열.cpp" />
+    <ClCompile Include="cpp\AJIT-new\2024년 정올 최종 모의고사 2회\522_앉을-수-있는-자리.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
