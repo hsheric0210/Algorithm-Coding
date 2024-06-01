@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpp\AJIT-new\2024년 정올 최종 모의고사 2회\522_앉을-수-있는-자리.cpp" />
+    <ClCompile Include="cpp\AJIT-new\ICT 경시대회-2\9785_음악프로그램.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

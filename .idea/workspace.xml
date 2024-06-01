@@ -5,21 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad72bc49-2a6c-4aea-94f3-d0c52c795896" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100010.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100010.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100010.hwp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100011.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100011.hwp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/100011.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python3/AJIT/17504.hwp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python3/AJIT/17504.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python3/AJIT/1831.hwp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python3/AJIT/1831.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 1회/주유소문제 #100018/1.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 1회/주유소문제 #100018/1.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 1회/주유소문제 #100018/2.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 1회/주유소문제 #100018/2.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 1회/주유소문제 #100018/3.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 1회/주유소문제 #100018/3.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 1회/주유소문제 #100018/src.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 1회/주유소문제 #100018/src.min.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 3회/27013_참외밭.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 3회/45474_케이블-자르기.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/ICT 경시대회-2/45465_car-racing.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/AJIT-new/ICT 경시대회-2/46060_Inversion-Sequence.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/46060.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Algorithm-Coding.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm-Coding.vcxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Algorithm-Coding.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm-Coding.vcxproj.filters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/17504.100.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cpp/AJIT-new/고급-1/17504.100.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 1회/100018_주유소문제.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 2회/9812_교차점개수.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cpp/AJIT-new/2024년 정올 최종 모의고사 2회/9812_교차점개수.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
