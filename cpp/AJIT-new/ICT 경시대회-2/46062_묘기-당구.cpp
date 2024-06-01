@@ -6,12 +6,12 @@
 using namespace std;
 int i, j, k, l, P, Q, m, n, o, r, s, t, u, v, w, x, y, z;
 vector<int>Trace;
-int gcd(int a, int b) { int c; while (1) { c = a % b; if (c == 0)return b; a = b; b = c; }	return 1; }// À¯Å¬¸®µå È£Á¦¹ý
+int gcd(int a, int b) { int c; while (1) { c = a % b; if (c == 0)return b; a = b; b = c; }	return 1; }// ìœ í´ë¦¬ë“œ í˜¸ì œë²•
 int corner() { return (P % 2) ? (4 - Q % 2) : (1 + Q % 2); }
 int main()
 {
 	cin >> P >> Q; // slope: P/Q
-	k = gcd(P, Q); P /= k; Q /= k; // ¾àºÐ
+	k = gcd(P, Q); P /= k; Q /= k; // ì•½ë¶„
 	u = min(P, Q); v = max(P, Q);
 	if (P != Q)
 	{
@@ -22,11 +22,11 @@ int main()
 			m = j % 2;
 
 			for (x = 1; x <= k; x++)
-				Trace.push_back(m = (m + 1) % 2); // °¡·Î: 0=E, 1=W, ¼¼·Î: 0=N, 1=S
+				Trace.push_back(m = (m + 1) % 2); // ê°€ë¡œ: 0=E, 1=W, ì„¸ë¡œ: 0=N, 1=S
 			reverse(Trace.end() - k, Trace.end());
 
 			if (dv.rem)
-				Trace.push_back((y = (y + 1) % 2) + 2); // °¡·Î: 2=S, 3=N, ¼¼·Î: 2=W, 3=E
+				Trace.push_back((y = (y + 1) % 2) + 2); // ê°€ë¡œ: 2=S, 3=N, ì„¸ë¡œ: 2=W, 3=E
 		}
 	}
 

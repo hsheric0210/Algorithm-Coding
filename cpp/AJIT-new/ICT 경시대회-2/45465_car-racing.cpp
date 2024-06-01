@@ -7,7 +7,7 @@ deque<int>P, Q;
 int main()
 {
 	cin >> N; while (N--) { cin >> j; P.push_back(j); }
-	k = 1; // ´ÙÀ½¿¡ ²¨³»¾ß ÇÒ ÀÚµ¿Â÷ ¹øÈ£
+	k = 1; // ë‹¤ìŒì— êº¼ë‚´ì•¼ í•  ìžë™ì°¨ ë²ˆí˜¸
 	while (true)
 	{
 		if (!P.empty() && P.front() == k)

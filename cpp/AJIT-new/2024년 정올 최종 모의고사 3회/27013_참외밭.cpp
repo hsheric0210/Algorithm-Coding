@@ -25,7 +25,7 @@ int main()
 		T[i] = { i,p,q };
 	}
 
-	S = M[0].len * M[1].len; // Å« »ç°¢Çü
+	S = M[0].len * M[1].len; // í° ì‚¬ê°í˜•
 	
 	// m = w-offset, n = h-offset
 	if (M[0].dir == 1) // W.dir==1
@@ -60,7 +60,7 @@ int main()
 #ifndef ONLINE_JUDGE
 	cout << "m=" << M[0].index << " n=" << M[1].index << " a1=" << k << " a2=" << l << '\n';
 #endif
-	s = T[k].len * T[l].len; // ÀÛÀº »ç°¢Çü (-> °¡Àå ±ä µÎ º¯ÀÇ ´ÙÀ½´ÙÀ½ ¶Ç´Â ÀÌÀüÀÌÀü µÎ º¯À» º¯À¸·Î ÇÔ)
+	s = T[k].len * T[l].len; // ì‘ì€ ì‚¬ê°í˜• (-> ê°€ì¥ ê¸´ ë‘ ë³€ì˜ ë‹¤ìŒë‹¤ìŒ ë˜ëŠ” ì´ì „ì´ì „ ë‘ ë³€ì„ ë³€ìœ¼ë¡œ í•¨)
 	cout << (S - s) * N;
 	return 0;
 }
