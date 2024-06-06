@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpp\AJIT-new\ICT 경시대회-2\46004_주유소문제.cpp" />
+    <ClCompile Include="cpp\AJIT-new\ICT 경시대회-2-시간제한2차\1.46004_주유소문제.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

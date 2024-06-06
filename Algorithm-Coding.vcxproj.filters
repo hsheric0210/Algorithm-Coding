@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpp\AJIT-new\ICT 경시대회-2\46004_주유소문제.cpp">
+    <ClCompile Include="cpp\AJIT-new\ICT 경시대회-2-시간제한2차\1.46004_주유소문제.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
