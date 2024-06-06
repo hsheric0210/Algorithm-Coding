@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpp\AJIT-new\ICT 경시대회-2-시간제한2차\3.46074_만능카드.cpp">
+    <ClCompile Include="cpp\AJIT-new\ICT 경시대회-2-시간제한3차\4.46061_MP3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
